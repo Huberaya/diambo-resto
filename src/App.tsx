@@ -427,6 +427,28 @@ function App() {
     };
   }, [menuOpen]);
 
+  // Deep-link (QR code, ancres) : scrolle vers la section demandée une fois la page rendue
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (!hash) return;
+    let attempts = 0;
+    let timer: ReturnType<typeof setTimeout>;
+    const tryScroll = () => {
+      const target = document.getElementById(hash);
+      if (target) {
+        target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+      } else if (attempts < 30) {
+        attempts += 1;
+        timer = setTimeout(tryScroll, 100);
+      }
+    };
+    const raf = requestAnimationFrame(tryScroll);
+    return () => {
+      cancelAnimationFrame(raf);
+      clearTimeout(timer);
+    };
+  }, [reduceMotion]);
+
   const filteredMenu = useMemo(
     () => (activeFilter === "Tous" ? menuItems : menuItems.filter((item) => item.category === activeFilter)),
     [activeFilter],
