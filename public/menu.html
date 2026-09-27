@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#20130e" />
-<meta name="description" content="La carte de Diambo Resto — spécialités d'Afrique de l'Ouest, jus faits maison et thé Ataya. 28 Rue Neuve des Boulets, Paris 11." />
+<meta name="description" content="La carte de Diambo Resto en photos — spécialités d'Afrique de l'Ouest, jus faits maison et thé Ataya. 28 Rue Neuve des Boulets, Paris 11." />
 <title>Notre carte — Diambo Resto</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,34 +18,38 @@
   html { background: var(--cream); }
   body { margin: 0; background: var(--cream); color: var(--ink); font-family: Manrope, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration: none; }
+  img { display: block; width: 100%; height: 100%; object-fit: cover; }
   .page { max-width: 640px; margin: 0 auto; padding: 56px 26px 64px; }
-  .frame { border: 1px solid var(--ink); outline: 1px solid var(--terracotta); outline-offset: 10px; padding: 44px 30px 40px; background: var(--ivory); }
+  .frame { border: 1px solid var(--ink); outline: 1px solid var(--terracotta); outline-offset: 10px; padding: 44px 26px 40px; background: var(--ivory); }
   header { text-align: center; }
   .brand-mark { width: 54px; height: 54px; margin: 0 auto; display: grid; place-items: center; border: 1px solid var(--ink); border-radius: 50%; font-family: 'DM Serif Display', Georgia, serif; font-size: 34px; line-height: 1; }
   .brand-name { margin-top: 14px; font-weight: 800; font-size: 22px; letter-spacing: .16em; }
   .brand-sub { margin-top: 6px; font-family: 'Space Grotesk', sans-serif; font-size: 9px; letter-spacing: .43em; font-weight: 600; color: var(--terracotta-deep); }
   .eyebrow { margin-top: 30px; display: flex; align-items: center; justify-content: center; gap: 11px; color: var(--terracotta-deep); font-family: 'Space Grotesk', sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; }
   .eyebrow::before { content: ''; width: 32px; height: 1px; background: currentColor; }
-  h1 { margin: 14px 0 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: clamp(44px, 11vw, 62px); letter-spacing: -.04em; line-height: .95; }
+  h1 { margin: 14px 0 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: clamp(40px, 10vw, 58px); letter-spacing: -.04em; line-height: .98; }
   h1 em { color: var(--terracotta); font-style: italic; }
-  .cat { margin-top: 44px; }
+  .cat { margin-top: 46px; }
   .cat-title { display: flex; align-items: center; gap: 14px; font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; color: var(--terracotta-deep); }
   .cat-title::after { content: ''; flex: 1; height: 1px; background: var(--line); }
-  .item { padding: 17px 0 15px; border-bottom: 1px solid var(--line); }
-  .item:last-child { border-bottom: 0; }
-  .item-row { display: flex; align-items: baseline; gap: 10px; }
-  .item-row h3 { margin: 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 22px; letter-spacing: -.02em; }
-  .dots { flex: 1; border-bottom: 1px dotted rgba(28,24,21,.35); transform: translateY(-4px); }
-  .price { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; color: var(--terracotta); white-space: nowrap; }
-  .item p { margin: 7px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; }
-  .tag { display: inline-block; margin-left: 9px; padding: 3px 7px; background: var(--cream); border: 1px solid var(--line); font-family: 'Space Grotesk', sans-serif; font-size: 8px; letter-spacing: .12em; text-transform: uppercase; color: var(--terracotta-deep); vertical-align: 3px; }
-  footer { margin-top: 46px; text-align: center; }
+  .grid { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px 14px; }
+  .dish { min-width: 0; }
+  .dish-img { position: relative; aspect-ratio: 1.05; overflow: hidden; background: #e5ddd2; }
+  .dish-img img { filter: saturate(.88); transition: transform .8s cubic-bezier(.16,1,.3,1), filter .6s ease; }
+  .dish:hover .dish-img img { transform: scale(1.06); filter: saturate(1.08); }
+  .tag { position: absolute; top: 9px; left: 9px; padding: 5px 7px; background: rgba(251,249,244,.93); font-family: 'Space Grotesk', sans-serif; font-size: 7.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
+  .dish-info { padding: 12px 2px 0; }
+  .dish-row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+  .dish-row h3 { margin: 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 19px; letter-spacing: -.02em; line-height: 1.1; }
+  .price { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600; color: var(--terracotta); white-space: nowrap; }
+  .dish-info p { margin: 6px 0 0; color: var(--muted); font-size: 11px; line-height: 1.55; }
+  footer { margin-top: 48px; text-align: center; }
   .sep { width: 34px; height: 1px; margin: 0 auto 22px; background: var(--gold); }
   .addr { color: var(--muted); font-size: 12px; line-height: 1.7; }
   .addr a { color: var(--terracotta-deep); font-weight: 600; }
   .hours { margin-top: 14px; font-family: 'Space Grotesk', sans-serif; font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
   .note { margin-top: 18px; color: rgba(119,109,100,.75); font-size: 10px; }
-  @media (max-width: 420px) { .frame { padding: 34px 18px 30px; } .item-row h3 { font-size: 19px; } }
+  @media (max-width: 400px) { .frame { padding: 34px 16px 30px; } .grid { gap: 22px 10px; } .dish-row h3 { font-size: 17px; } .dish-info p { font-size: 10px; } }
 </style>
 </head>
 <body>
@@ -56,66 +60,72 @@
       <div class="brand-name">DIAMBO</div>
       <div class="brand-sub">RESTO</div>
       <div class="eyebrow">Paris 11e · Rue Neuve des Boulets</div>
-      <h1>Notre <em>carte.</em></h1>
+      <h1>Découvrez nos<br /><em>délicieux plats.</em></h1>
     </header>
 
     <section class="cat">
       <div class="cat-title">Signatures</div>
-      <div class="item">
-        <div class="item-row"><h3>Thiéb au poulet<span class="tag">Le classique</span></h3><span class="dots"></span><span class="price">12 €</span></div>
-        <p>Riz parfumé au poulet, légumes de saison mijotés</p>
-      </div>
-      <div class="item">
-        <div class="item-row"><h3>Thiéb au poisson<span class="tag">Tradition</span></h3><span class="dots"></span><span class="price">12 €</span></div>
-        <p>Le plat national — riz au poisson en sauce tomate, légumes fondants</p>
-      </div>
-      <div class="item">
-        <div class="item-row"><h3>Poisson braisé<span class="tag">À partager</span></h3><span class="dots"></span><span class="price">16 €</span></div>
-        <p>Poisson entier grillé, attiéké et condiments frais</p>
-      </div>
-      <div class="item">
-        <div class="item-row"><h3>Yassa au poulet</h3><span class="dots"></span><span class="price">13 €</span></div>
-        <p>Poulet rôti, oignons confits au citron et moutarde douce</p>
+      <div class="grid">
+        <article class="dish">
+          <div class="dish-img"><img src="https://images.pexels.com/photos/33434014/pexels-photo-33434014.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=600&h=560" alt="Thiéb au poulet" loading="eager" /><span class="tag">Le classique</span></div>
+          <div class="dish-info"><div class="dish-row"><h3>Thiéb au poulet</h3><span class="price">12 €</span></div><p>Riz parfumé au poulet, légumes de saison mijotés</p></div>
+        </article>
+        <article class="dish">
+          <div class="dish-img"><img src="https://images.pexels.com/photos/20067063/pexels-photo-20067063.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=600&h=560" alt="Thiéb au poisson" loading="eager" /><span class="tag">Tradition</span></div>
+          <div class="dish-info"><div class="dish-row"><h3>Thiéb au poisson</h3><span class="price">12 €</span></div><p>Le plat national — riz au poisson en sauce tomate, légumes fondants</p></div>
+        </article>
+        <article class="dish">
+          <div class="dish-img"><img src="https://images.pexels.com/photos/26587855/pexels-photo-26587855.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=600&h=560" alt="Poisson braisé" loading="lazy" /><span class="tag">À partager</span></div>
+          <div class="dish-info"><div class="dish-row"><h3>Poisson braisé</h3><span class="price">16 €</span></div><p>Poisson entier grillé, attiéké et condiments frais</p></div>
+        </article>
+        <article class="dish">
+          <div class="dish-img"><img src="https://images.pexels.com/photos/17696671/pexels-photo-17696671.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=600&h=560" alt="Yassa au poulet" loading="lazy" /></div>
+          <div class="dish-info"><div class="dish-row"><h3>Yassa au poulet</h3><span class="price">13 €</span></div><p>Poulet rôti, oignons confits au citron et moutarde douce</p></div>
+        </article>
       </div>
     </section>
 
     <section class="cat">
       <div class="cat-title">Classiques</div>
-      <div class="item">
-        <div class="item-row"><h3>Maffé</h3><span class="dots"></span><span class="price">13 €</span></div>
-        <p>Sauce onctueuse à l'arachide, riz blanc et légumes</p>
-      </div>
-      <div class="item">
-        <div class="item-row"><h3>Attiéké</h3><span class="dots"></span><span class="price">15 €</span></div>
-        <p>Semoule de manioc, poisson et garniture croquante</p>
-      </div>
-      <div class="item">
-        <div class="item-row"><h3>Saga saga</h3><span class="dots"></span><span class="price">13 €</span></div>
-        <p>Feuilles de manioc en sauce, servies avec riz blanc</p>
-      </div>
-      <div class="item">
-        <div class="item-row"><h3>Ganan</h3><span class="dots"></span><span class="price">13 €</span></div>
-        <p>Plat traditionnel généreux, recette maison</p>
+      <div class="grid">
+        <article class="dish">
+          <div class="dish-img"><img src="https://images.pexels.com/photos/998244/pexels-photo-998244.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=600&h=560" alt="Maffé" loading="lazy" /></div>
+          <div class="dish-info"><div class="dish-row"><h3>Maffé</h3><span class="price">13 €</span></div><p>Sauce onctueuse à l'arachide, riz blanc et légumes</p></div>
+        </article>
+        <article class="dish">
+          <div class="dish-img"><img src="https://images.pexels.com/photos/34520964/pexels-photo-34520964.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=600&h=560" alt="Attiéké" loading="lazy" /></div>
+          <div class="dish-info"><div class="dish-row"><h3>Attiéké</h3><span class="price">15 €</span></div><p>Semoule de manioc, poisson et garniture croquante</p></div>
+        </article>
+        <article class="dish">
+          <div class="dish-img"><img src="https://images.pexels.com/photos/36090553/pexels-photo-36090553.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=600&h=560" alt="Saga saga" loading="lazy" /></div>
+          <div class="dish-info"><div class="dish-row"><h3>Saga saga</h3><span class="price">13 €</span></div><p>Feuilles de manioc en sauce, servies avec riz blanc</p></div>
+        </article>
+        <article class="dish">
+          <div class="dish-img"><img src="https://images.pexels.com/photos/36090555/pexels-photo-36090555.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=600&h=560" alt="Ganan" loading="lazy" /></div>
+          <div class="dish-info"><div class="dish-row"><h3>Ganan</h3><span class="price">13 €</span></div><p>Plat traditionnel généreux, recette maison</p></div>
+        </article>
       </div>
     </section>
 
     <section class="cat">
       <div class="cat-title">Boissons</div>
-      <div class="item">
-        <div class="item-row"><h3>Jus de Bissap<span class="tag">Fait maison</span></h3><span class="dots"></span><span class="price">4 €</span></div>
-        <p>Hibiscus fait maison, servi en bouteille — frais et parfumé</p>
-      </div>
-      <div class="item">
-        <div class="item-row"><h3>Jus de Gingembre<span class="tag">Fait maison</span></h3><span class="dots"></span><span class="price">4 €</span></div>
-        <p>Gingembre frais pressé, mis en bouteille — tonique et épicé</p>
-      </div>
-      <div class="item">
-        <div class="item-row"><h3>Jus de Tamarin<span class="tag">Fait maison</span></h3><span class="dots"></span><span class="price">4 €</span></div>
-        <p>Tamarin naturel en bouteille — doux, acidulé, rafraîchissant</p>
-      </div>
-      <div class="item">
-        <div class="item-row"><h3>Thé Ataya<span class="tag">Le rituel</span></h3><span class="dots"></span><span class="price">3 €</span></div>
-        <p>Le rituel ouest-africain — trois services, à la menthe, préparé devant vous</p>
+      <div class="grid">
+        <article class="dish">
+          <div class="dish-img"><img src="https://images.pexels.com/photos/34467117/pexels-photo-34467117.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=600&h=560" alt="Jus de Bissap" loading="lazy" /><span class="tag">Fait maison</span></div>
+          <div class="dish-info"><div class="dish-row"><h3>Jus de Bissap</h3><span class="price">4 €</span></div><p>Hibiscus fait maison, servi en bouteille — frais et parfumé</p></div>
+        </article>
+        <article class="dish">
+          <div class="dish-img"><img src="https://images.pexels.com/photos/7655906/pexels-photo-7655906.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=600&h=560" alt="Jus de Gingembre" loading="lazy" /><span class="tag">Fait maison</span></div>
+          <div class="dish-info"><div class="dish-row"><h3>Jus de Gingembre</h3><span class="price">4 €</span></div><p>Gingembre frais pressé, mis en bouteille — tonique et épicé</p></div>
+        </article>
+        <article class="dish">
+          <div class="dish-img"><img src="https://images.pexels.com/photos/13300732/pexels-photo-13300732.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=600&h=560" alt="Jus de Tamarin" loading="lazy" /><span class="tag">Fait maison</span></div>
+          <div class="dish-info"><div class="dish-row"><h3>Jus de Tamarin</h3><span class="price">4 €</span></div><p>Tamarin naturel en bouteille — doux, acidulé, rafraîchissant</p></div>
+        </article>
+        <article class="dish">
+          <div class="dish-img"><img src="https://images.pexels.com/photos/37515893/pexels-photo-37515893.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=600&h=560" alt="Thé Ataya" loading="lazy" /><span class="tag">Le rituel</span></div>
+          <div class="dish-info"><div class="dish-row"><h3>Thé Ataya</h3><span class="price">3 €</span></div><p>Le rituel ouest-africain — trois services, à la menthe, préparé devant vous</p></div>
+        </article>
       </div>
     </section>
 
