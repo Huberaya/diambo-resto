@@ -61,6 +61,17 @@
   .row .dots { flex: 1; border-bottom: 1px dotted rgba(28,24,21,.32); transform: translateY(-4px); }
   .row .p { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600; color: var(--terracotta); white-space: nowrap; }
   .row small { display: block; color: var(--muted); font-size: 10.5px; font-style: italic; }
+  .dessert .vignette { margin: 0 auto 14px; width: 86px; height: 86px; }
+  .juice-grid { margin-top: 34px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 16px; }
+  .juice-card { padding: 24px 16px 18px; border: 1px solid var(--line); background: var(--cream); text-align: center; }
+  .juice-card .vignette { margin: 0 auto 13px; width: 78px; height: 78px; }
+  .juice-card h4 { margin: 0; font-family: 'DM Serif Display', Georgia, serif; font-weight: 400; font-size: 21px; }
+  .juice-mini { margin-top: 13px; }
+  .juice-mini .tarif-head, .juice-mini .tarif-row { grid-template-columns: 1fr repeat(3, 42px); gap: 5px; }
+  .juice-mini .tarif-head { font-size: 7px; }
+  .juice-mini .tarif-row { padding: 7px 0; }
+  .juice-mini .tarif-row .name { font-family: 'Space Grotesk', sans-serif; font-size: 11px; color: var(--muted); }
+  .juice-mini .tarif-row .v { font-size: 11px; }
   .row-img { align-items: center; }
   .vignette { flex: 0 0 auto; width: 56px; height: 56px; padding: 3px; border: 1px solid var(--line); border-radius: 50%; background: var(--ivory); }
   .vignette img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; filter: saturate(.92); }
@@ -98,7 +109,7 @@
     .grid { gap: 28px 12px; }
     .dish h3 { font-size: 18px; }
     .insert { margin-left: -20px; margin-right: -20px; height: 240px; }
-    .desserts { grid-template-columns: 1fr; gap: 12px; }
+    .desserts { grid-template-columns: 1fr; gap: 12px; }.juice-grid { grid-template-columns: 1fr; }
     .tarif-head, .tarif-row { grid-template-columns: 1fr repeat(3, 46px); gap: 6px; }
     .tarif-row .name { font-size: 15px; }
     .tarif-row .v { font-size: 11.5px; }
@@ -204,9 +215,9 @@
       <div class="rule"></div>
     </div>
     <div class="desserts">
-      <div class="dessert"><h4>Sombi</h4><p>Douceur maison au mil</p><span class="p">4 €</span></div>
-      <div class="dessert"><h4>Fondé</h4><p>Douceur maison au mil</p><span class="p">4 €</span></div>
-      <div class="dessert"><h4>Dégué</h4><p>Douceur maison au mil</p><span class="p">4 €</span></div>
+      <div class="dessert"><span class="vignette"><img src="images/desserts/sombi.jpg" alt="Sombi" loading="lazy" /></span><h4>Sombi</h4><p>Douceur maison au mil</p><span class="p">4 €</span></div>
+      <div class="dessert"><span class="vignette"><img src="images/desserts/fonde.jpg" alt="Fondé" loading="lazy" /></span><h4>Fondé</h4><p>Douceur maison au mil</p><span class="p">4 €</span></div>
+      <div class="dessert"><span class="vignette"><img src="images/desserts/degue.jpg" alt="Dégué" loading="lazy" /></span><h4>Dégué</h4><p>Douceur maison au mil</p><span class="p">4 €</span></div>
     </div>
   </section>
 
@@ -217,16 +228,43 @@
       <p class="sec-sub">Préparés ici, mis en bouteille — frais, vrais, sans compromis.</p>
       <div class="rule"></div>
     </div>
-    <div class="tarifs">
-      <div class="tarif-head"><span></span><span>Comptoir</span><span>À emp.</span><span>En salle</span></div>
-      <div class="tarif-row"><span class="name">Gingembre <i>25 cl</i></span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
-      <div class="tarif-row"><span class="name">Gingembre <i>50 cl</i></span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
-      <div class="tarif-row"><span class="name">Tamarin <i>25 cl</i></span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
-      <div class="tarif-row"><span class="name">Tamarin <i>50 cl</i></span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
-      <div class="tarif-row"><span class="name">Baobab <i>25 cl</i></span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
-      <div class="tarif-row"><span class="name">Baobab <i>50 cl</i></span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
-      <div class="tarif-row"><span class="name">Bissap <i>25 cl</i></span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
-      <div class="tarif-row"><span class="name">Bissap <i>50 cl</i></span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
+    <div class="juice-grid">
+      <div class="juice-card">
+        <span class="vignette"><img src="https://images.pexels.com/photos/7655906/pexels-photo-7655906.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400" alt="Jus de gingembre" loading="lazy" /></span>
+        <h4>Gingembre</h4>
+        <div class="juice-mini">
+          <div class="tarif-head"><span></span><span>Compt.</span><span>À emp.</span><span>Salle</span></div>
+          <div class="tarif-row"><span class="name">25 cl</span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
+          <div class="tarif-row"><span class="name">50 cl</span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
+        </div>
+      </div>
+      <div class="juice-card">
+        <span class="vignette"><img src="https://images.pexels.com/photos/13300732/pexels-photo-13300732.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400" alt="Jus de tamarin" loading="lazy" /></span>
+        <h4>Tamarin</h4>
+        <div class="juice-mini">
+          <div class="tarif-head"><span></span><span>Compt.</span><span>À emp.</span><span>Salle</span></div>
+          <div class="tarif-row"><span class="name">25 cl</span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
+          <div class="tarif-row"><span class="name">50 cl</span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
+        </div>
+      </div>
+      <div class="juice-card">
+        <span class="vignette"><img src="images/boissons/baobab.jpg" alt="Jus de baobab" loading="lazy" /></span>
+        <h4>Baobab</h4>
+        <div class="juice-mini">
+          <div class="tarif-head"><span></span><span>Compt.</span><span>À emp.</span><span>Salle</span></div>
+          <div class="tarif-row"><span class="name">25 cl</span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
+          <div class="tarif-row"><span class="name">50 cl</span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
+        </div>
+      </div>
+      <div class="juice-card">
+        <span class="vignette"><img src="https://images.pexels.com/photos/34467117/pexels-photo-34467117.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=400&h=400" alt="Jus de bissap" loading="lazy" /></span>
+        <h4>Bissap</h4>
+        <div class="juice-mini">
+          <div class="tarif-head"><span></span><span>Compt.</span><span>À emp.</span><span>Salle</span></div>
+          <div class="tarif-row"><span class="name">25 cl</span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
+          <div class="tarif-row"><span class="name">50 cl</span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -243,11 +281,11 @@
     </div>
     <div class="tarifs">
       <div class="tarif-head"><span></span><span>Comptoir</span><span>À emp.</span><span>En salle</span></div>
-      <div class="tarif-row"><span class="name">Boissons 33 cl</span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
-      <div class="tarif-row"><span class="name">Vita Malt <i>bouteille</i></span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
-      <div class="tarif-row"><span class="name">Vita Malt <i>canette</i></span><span class="v">2,50 €</span><span class="v">2,50 €</span><span class="v hi">2,50 €</span></div>
-      <div class="tarif-row"><span class="name">Sirop — Diabolo</span><span class="v">2,50 €</span><span class="v">2,50 €</span><span class="v hi">2,50 €</span></div>
-      <div class="tarif-row"><span class="name">Eau minérale</span><span class="v">1,00 €</span><span class="v">1,00 €</span><span class="v hi">2,50 €</span></div>
+      <div class="tarif-row row-img"><span class="vignette"><img src="images/boissons/sodas.jpg" alt="Boissons 33 cl" loading="lazy" /></span><span class="name">Boissons 33 cl</span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
+      <div class="tarif-row row-img"><span class="vignette"><img src="images/boissons/vita-malt.jpg" alt="Vita Malt" loading="lazy" /></span><span class="name">Vita Malt <i>bouteille</i></span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
+      <div class="tarif-row row-img"><span class="vignette"><img src="images/boissons/vita-malt.jpg" alt="Vita Malt" loading="lazy" /></span><span class="name">Vita Malt <i>canette</i></span><span class="v">2,50 €</span><span class="v">2,50 €</span><span class="v hi">2,50 €</span></div>
+      <div class="tarif-row row-img"><span class="vignette"><img src="images/boissons/diabolo.jpg" alt="Sirop — Diabolo" loading="lazy" /></span><span class="name">Sirop — Diabolo</span><span class="v">2,50 €</span><span class="v">2,50 €</span><span class="v hi">2,50 €</span></div>
+      <div class="tarif-row row-img"><span class="vignette"><img src="images/boissons/eau.jpg" alt="Eau minérale" loading="lazy" /></span><span class="name">Eau minérale</span><span class="v">1,00 €</span><span class="v">1,00 €</span><span class="v hi">2,50 €</span></div>
     </div>
   </section>
 
@@ -260,16 +298,16 @@
     </div>
     <div class="tarifs">
       <div class="tarif-head"><span></span><span>Comptoir</span><span>À emp.</span><span>En salle</span></div>
-      <div class="tarif-row"><span class="name">Café</span><span class="v">1,40 €</span><span class="v">1,40 €</span><span class="v hi">2,50 €</span></div>
-      <div class="tarif-row"><span class="name">Café noisette</span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
-      <div class="tarif-row"><span class="name">Café allongé</span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
-      <div class="tarif-row"><span class="name">Café crème</span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
-      <div class="tarif-row"><span class="name">Café crème + tartine</span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
-      <div class="tarif-row"><span class="name">Thé <i>Starling ou Lipton</i></span><span class="v">2,00 €</span><span class="v">2,00 €</span><span class="v hi">2,50 €</span></div>
-      <div class="tarif-row"><span class="name">Lipton au lait</span><span class="v">2,50 €</span><span class="v">2,50 €</span><span class="v hi">2,50 €</span></div>
-      <div class="tarif-row"><span class="name">Lipton + tartine</span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
-      <div class="tarif-row"><span class="name">Lipton lait + tartine</span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
-      <div class="tarif-row"><span class="name">Thé Hatayé</span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
+      <div class="tarif-row row-img"><span class="vignette"><img src="images/boissons/cafe.jpg" alt="Café" loading="lazy" /></span><span class="name">Café</span><span class="v">1,40 €</span><span class="v">1,40 €</span><span class="v hi">2,50 €</span></div>
+      <div class="tarif-row row-img"><span class="vignette"><img src="images/boissons/cafe.jpg" alt="Café noisette" loading="lazy" /></span><span class="name">Café noisette</span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
+      <div class="tarif-row row-img"><span class="vignette"><img src="images/boissons/cafe-allonge.jpg" alt="Café allongé" loading="lazy" /></span><span class="name">Café allongé</span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
+      <div class="tarif-row row-img"><span class="vignette"><img src="images/boissons/cafe-creme.jpg" alt="Café crème" loading="lazy" /></span><span class="name">Café crème</span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
+      <div class="tarif-row row-img"><span class="vignette"><img src="images/boissons/cafe-creme.jpg" alt="Café crème + tartine" loading="lazy" /></span><span class="name">Café crème + tartine</span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
+      <div class="tarif-row row-img"><span class="vignette"><img src="images/boissons/the-noir.jpg" alt="Thé" loading="lazy" /></span><span class="name">Thé <i>Starling ou Lipton</i></span><span class="v">2,00 €</span><span class="v">2,00 €</span><span class="v hi">2,50 €</span></div>
+      <div class="tarif-row row-img"><span class="vignette"><img src="images/boissons/the-lait.jpg" alt="Lipton au lait" loading="lazy" /></span><span class="name">Lipton au lait</span><span class="v">2,50 €</span><span class="v">2,50 €</span><span class="v hi">2,50 €</span></div>
+      <div class="tarif-row row-img"><span class="vignette"><img src="images/boissons/the-noir.jpg" alt="Lipton + tartine" loading="lazy" /></span><span class="name">Lipton + tartine</span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
+      <div class="tarif-row row-img"><span class="vignette"><img src="images/boissons/the-lait.jpg" alt="Lipton lait + tartine" loading="lazy" /></span><span class="name">Lipton lait + tartine</span><span class="v">3,00 €</span><span class="v">3,00 €</span><span class="v hi">3,00 €</span></div>
+      <div class="tarif-row row-img"><span class="vignette"><img src="images/boissons/the-hataye.jpg" alt="Thé Hatayé" loading="lazy" /></span><span class="name">Thé Hatayé</span><span class="v">1,50 €</span><span class="v">1,50 €</span><span class="v hi">2,50 €</span></div>
     </div>
   </section>
 
