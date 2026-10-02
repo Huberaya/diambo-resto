@@ -139,7 +139,7 @@ const menuItems: MenuItem[] = [
       "https://images.pexels.com/photos/13300732/pexels-photo-13300732.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
   },
   {
-    name: "Thé Ataya",
+    name: "Thé Hataye",
     detail: "Le rituel ouest-africain — trois services, à la menthe, préparé devant vous",
     price: "3 €",
     category: "drinks",
@@ -577,7 +577,7 @@ function App() {
                 <button className="button button-primary" onClick={() => scrollTo("carte")} data-cursor="découvrir">
                   <span>Découvrir la carte</span><Icon name="arrow" size={18} />
                 </button>
-                <a className="button button-ghost" href="https://diamboresto.fr" target="_blank" rel="noreferrer" data-cursor="commander">
+                <a className="button button-ghost" href="https://diambo-resto.fr" target="_blank" rel="noreferrer" data-cursor="commander">
                   Commander en ligne <Icon name="arrowUpRight" size={18} />
                 </a>
               </div>
@@ -619,7 +619,7 @@ function App() {
               <div className="marquee-group" key={group} aria-hidden={group === 1}>
                 <span>Cuisine d'Afrique de l'Ouest</span><i />
                 <span>Jus faits maison</span><i />
-                <span>Thé Ataya</span><i />
+                <span>Thé Hataye</span><i />
                 <span>Matchs en direct</span><i />
                 <span>Sur place</span><i />
                 <span>À emporter</span><i />
@@ -645,7 +645,7 @@ function App() {
               <div className="eyebrow"><span className="eyebrow-line" /> L'adresse</div>
               <h2>Ici, on est en <em>famille.</em></h2>
               <p>Chez Diambo, on ne vient pas juste manger — on vient retrouver l'ambiance d'une grande famille. On s'installe, on discute, on partage un plat, on regarde le match ensemble sur grand écran. C'est convivial, chaleureux, vivant.</p>
-              <p>Les habitués le savent : entre le thé Ataya servi dans les règles de l'art, les jus de bissap, gingembre et tamarin faits maison en bouteille, et les plats généreux qui sentent bon l'Afrique de l'Ouest, on se sent chez soi.</p>
+              <p>Les habitués le savent : entre le thé Hataye servi dans les règles de l'art, les jus de bissap, gingembre et tamarin faits maison en bouteille, et les plats généreux qui sentent bon l'Afrique de l'Ouest, on se sent chez soi.</p>
               <div className="story-signature">Bienvenue dans la famille <span>✦</span></div>
               <div className="story-actions">
                 <a className="text-link" href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer" data-cursor="itinéraire"><span>Voir l'itinéraire</span><Icon name="arrowUpRight" size={18} /></a>
@@ -662,7 +662,7 @@ function App() {
                 <div className="eyebrow"><span className="eyebrow-line" /> La carte</div>
                 <h2>Les incontournables<br /><em>de la maison.</em></h2>
               </div>
-              <div className="menu-intro"><p>Une sélection de spécialités ouest-africaines, choisies pour leur caractère et leur générosité.</p><a href="https://diamboresto.fr" target="_blank" rel="noreferrer" className="text-link" data-cursor="voir la carte">Carte complète <Icon name="arrowUpRight" size={18} /></a></div>
+              <div className="menu-intro"><p>Une sélection de spécialités ouest-africaines, choisies pour leur caractère et leur générosité.</p><a href="https://diambo-resto.fr" target="_blank" rel="noreferrer" className="text-link" data-cursor="voir la carte">Carte complète <Icon name="arrowUpRight" size={18} /></a></div>
             </Reveal>
 
             <div className="menu-toolbar" role="tablist" aria-label="Filtrer la carte">
@@ -729,11 +729,11 @@ function App() {
               </Reveal>
               <Reveal className="ambiance-card" delay={0.12}>
                 <div className="ambiance-card-image ambiance-card-dark">
-                  <img src="https://images.pexels.com/photos/37515893/pexels-photo-37515893.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700" alt="Thé Ataya servi à la menthe" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                  <img src="https://images.pexels.com/photos/37515893/pexels-photo-37515893.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700" alt="Thé Hataye servi à la menthe" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                   <div className="ambiance-card-overlay">
                     <span className="ambiance-card-icon">🍵</span>
-                    <h3>Le rituel de l'Ataya</h3>
-                    <p>Trois services de thé à la menthe, préparés selon la tradition. On prend le temps, on discute, on savoure. Le thé Ataya, c'est bien plus qu'une boisson — c'est un moment.</p>
+                    <h3>Le rituel du Hataye</h3>
+                    <p>Trois services de thé à la menthe, préparés selon la tradition. On prend le temps, on discute, on savoure. Le thé Hataye, c'est bien plus qu'une boisson — c'est un moment.</p>
                   </div>
                 </div>
               </Reveal>
@@ -752,7 +752,7 @@ function App() {
               <div className="ambiance-tags">
                 <span>🏠 Comme à la maison</span>
                 <span>⚽ Matchs en direct</span>
-                <span>🍵 Thé Ataya</span>
+                <span>🍵 Thé Hataye</span>
                 <span>🍹 Jus en bouteille</span>
                 <span>👨‍👩‍👧‍👦 Familial</span>
               </div>
@@ -802,11 +802,11 @@ function App() {
               ))}
             </div>
             <Reveal className="social-web" delay={0.26}>
-              <a className="social-web-card" href="https://diamboresto.fr" target="_blank" rel="noreferrer" data-cursor="commander">
+              <a className="social-web-card" href="https://diambo-resto.fr" target="_blank" rel="noreferrer" data-cursor="commander">
                 <span className="social-card-icon"><Icon name="globe" size={22} /></span>
                 <span className="social-web-copy">
                   <strong>Site internet</strong>
-                  <small>diamboresto.fr — carte complète & commande en ligne</small>
+                  <small>diambo-resto.fr — carte complète & commande en ligne</small>
                 </span>
                 <Icon name="arrowUpRight" size={18} />
               </a>
@@ -861,7 +861,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="footer-links"><div><small>Navigation</small><a href="#accueil">Accueil</a><a href="#carte">La carte</a><a href="#adresse">L'adresse</a><a href="#reseaux">Réseaux sociaux</a></div><div><small>Commander</small><a href="https://diamboresto.fr" target="_blank" rel="noreferrer">Site web</a><a href="https://www.ubereats.com/fr/store/diambo-resto/vQN5B1ZFSK6dT9vy7j52Vw" target="_blank" rel="noreferrer">Uber Eats</a><a href="https://deliveroo.fr/fr/menu/paris/11eme-nation/diambo-resto" target="_blank" rel="noreferrer">Deliveroo</a></div><div><small>Contact</small><a href="tel:+33980726675">09 80 72 66 75</a><a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer">Itinéraire</a><span>Paris 11e</span></div></div>
+          <div className="footer-links"><div><small>Navigation</small><a href="#accueil">Accueil</a><a href="#carte">La carte</a><a href="#adresse">L'adresse</a><a href="#reseaux">Réseaux sociaux</a></div><div><small>Commander</small><a href="https://diambo-resto.fr" target="_blank" rel="noreferrer">Site web</a><a href="https://www.ubereats.com/fr/store/diambo-resto/vQN5B1ZFSK6dT9vy7j52Vw" target="_blank" rel="noreferrer">Uber Eats</a><a href="https://deliveroo.fr/fr/menu/paris/11eme-nation/diambo-resto" target="_blank" rel="noreferrer">Deliveroo</a></div><div><small>Contact</small><a href="tel:+33980726675">09 80 72 66 75</a><a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer">Itinéraire</a><span>Paris 11e</span></div></div>
         </div>
         <div className="page-width footer-bottom"><span>© 2025 DIAMBO RESTO</span><span>Une table, un quartier, une histoire.</span><a href="#accueil">Retour en haut <Icon name="arrow" size={15} /></a></div>
       </footer>
@@ -871,7 +871,7 @@ function App() {
         <a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer" aria-label="Itinéraire vers Diambo Resto"><Icon name="pin" size={20} /></a>
       </div>
 
-      <div className="mobile-bottom-bar"><a href="tel:+33980726675"><Icon name="call" size={17} /> Appeler</a><a href="https://diamboresto.fr" target="_blank" rel="noreferrer"><Icon name="utensils" size={17} /> Commander</a></div>
+      <div className="mobile-bottom-bar"><a href="tel:+33980726675"><Icon name="call" size={17} /> Appeler</a><a href="https://diambo-resto.fr" target="_blank" rel="noreferrer"><Icon name="utensils" size={17} /> Commander</a></div>
     </div>
   );
 }
