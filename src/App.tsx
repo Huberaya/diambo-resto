@@ -47,7 +47,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Thiéb au poulet",
     detail: "Riz parfumé au poulet, légumes de saison mijotés",
-    price: "12 €",
+    price: "10 €",
     category: "signature",
     tag: "Le classique",
     image:
@@ -56,7 +56,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Thiéb au poisson",
     detail: "Le plat national — riz au poisson en sauce tomate, légumes fondants",
-    price: "12 €",
+    price: "10 €",
     category: "signature",
     tag: "Tradition",
     image:
@@ -65,7 +65,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Poisson braisé",
     detail: "Poisson entier grillé, attiéké et condiments frais",
-    price: "16 €",
+    price: "10 €",
     category: "signature",
     tag: "À partager",
     image:
@@ -74,7 +74,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Yassa au poulet",
     detail: "Poulet rôti, oignons confits au citron et moutarde douce",
-    price: "13 €",
+    price: "9 €",
     category: "signature",
     image:
       "https://images.pexels.com/photos/17696671/pexels-photo-17696671.jpeg?auto=compress&cs=tinysrgb&dpr=2&fit=crop&w=1200&h=950",
@@ -82,15 +82,15 @@ const menuItems: MenuItem[] = [
   {
     name: "Maffé",
     detail: "Sauce onctueuse à l'arachide, riz blanc et légumes",
-    price: "13 €",
+    price: "9 €",
     category: "classics",
     image:
       "https://images.pexels.com/photos/998244/pexels-photo-998244.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
   },
   {
-    name: "Attiéké",
-    detail: "Semoule de manioc, poisson et garniture croquante",
-    price: "15 €",
+    name: "Poisson braisé + attiéké + alloco",
+    detail: "Poisson grillé, semoule de manioc et alloco doré",
+    price: "12 €",
     category: "classics",
     image:
       "https://images.pexels.com/photos/34520964/pexels-photo-34520964.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
@@ -98,15 +98,15 @@ const menuItems: MenuItem[] = [
   {
     name: "Saga saga",
     detail: "Feuilles de manioc en sauce, servies avec riz blanc",
-    price: "13 €",
+    price: "9 €",
     category: "classics",
     image:
       "https://images.pexels.com/photos/36090553/pexels-photo-36090553.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
   },
   {
-    name: "Ganan",
+    name: "Ganna",
     detail: "Plat traditionnel généreux, recette maison",
-    price: "13 €",
+    price: "9 €",
     category: "classics",
     image:
       "https://images.pexels.com/photos/36090555/pexels-photo-36090555.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
@@ -114,7 +114,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Jus de Bissap",
     detail: "Hibiscus fait maison, servi en bouteille — frais et parfumé",
-    price: "4 €",
+    price: "2,50 €",
     category: "drinks",
     tag: "Fait maison",
     image:
@@ -123,7 +123,7 @@ const menuItems: MenuItem[] = [
   {
     name: "Jus de Gingembre",
     detail: "Gingembre frais pressé, mis en bouteille — tonique et épicé",
-    price: "4 €",
+    price: "2,50 €",
     category: "drinks",
     tag: "Fait maison",
     image:
@@ -132,16 +132,16 @@ const menuItems: MenuItem[] = [
   {
     name: "Jus de Tamarin",
     detail: "Tamarin naturel en bouteille — doux, acidulé, rafraîchissant",
-    price: "4 €",
+    price: "2,50 €",
     category: "drinks",
     tag: "Fait maison",
     image:
       "https://images.pexels.com/photos/13300732/pexels-photo-13300732.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
   },
   {
-    name: "Thé Hataye",
+    name: "Thé Hatayé",
     detail: "Le rituel ouest-africain — trois services, à la menthe, préparé devant vous",
-    price: "3 €",
+    price: "2,50 €",
     category: "drinks",
     tag: "Le rituel",
     image:
@@ -619,7 +619,7 @@ function App() {
               <div className="marquee-group" key={group} aria-hidden={group === 1}>
                 <span>Cuisine d'Afrique de l'Ouest</span><i />
                 <span>Jus faits maison</span><i />
-                <span>Thé Hataye</span><i />
+                <span>Thé Hatayé</span><i />
                 <span>Matchs en direct</span><i />
                 <span>Sur place</span><i />
                 <span>À emporter</span><i />
@@ -645,7 +645,7 @@ function App() {
               <div className="eyebrow"><span className="eyebrow-line" /> L'adresse</div>
               <h2>Ici, on est en <em>famille.</em></h2>
               <p>Chez Diambo, on ne vient pas juste manger — on vient retrouver l'ambiance d'une grande famille. On s'installe, on discute, on partage un plat, on regarde le match ensemble sur grand écran. C'est convivial, chaleureux, vivant.</p>
-              <p>Les habitués le savent : entre le thé Hataye servi dans les règles de l'art, les jus de bissap, gingembre et tamarin faits maison en bouteille, et les plats généreux qui sentent bon l'Afrique de l'Ouest, on se sent chez soi.</p>
+              <p>Les habitués le savent : entre le thé Hatayé servi dans les règles de l'art, les jus de bissap, gingembre et tamarin faits maison en bouteille, et les plats généreux qui sentent bon l'Afrique de l'Ouest, on se sent chez soi.</p>
               <div className="story-signature">Bienvenue dans la famille <span>✦</span></div>
               <div className="story-actions">
                 <a className="text-link" href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer" data-cursor="itinéraire"><span>Voir l'itinéraire</span><Icon name="arrowUpRight" size={18} /></a>
@@ -729,11 +729,11 @@ function App() {
               </Reveal>
               <Reveal className="ambiance-card" delay={0.12}>
                 <div className="ambiance-card-image ambiance-card-dark">
-                  <img src="https://images.pexels.com/photos/37515893/pexels-photo-37515893.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700" alt="Thé Hataye servi à la menthe" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                  <img src="https://images.pexels.com/photos/37515893/pexels-photo-37515893.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700" alt="Thé Hatayé servi à la menthe" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                   <div className="ambiance-card-overlay">
                     <span className="ambiance-card-icon">🍵</span>
-                    <h3>Le rituel du Hataye</h3>
-                    <p>Trois services de thé à la menthe, préparés selon la tradition. On prend le temps, on discute, on savoure. Le thé Hataye, c'est bien plus qu'une boisson — c'est un moment.</p>
+                    <h3>Le rituel du Hatayé</h3>
+                    <p>Trois services de thé à la menthe, préparés selon la tradition. On prend le temps, on discute, on savoure. Le thé Hatayé, c'est bien plus qu'une boisson — c'est un moment.</p>
                   </div>
                 </div>
               </Reveal>
@@ -752,7 +752,7 @@ function App() {
               <div className="ambiance-tags">
                 <span>🏠 Comme à la maison</span>
                 <span>⚽ Matchs en direct</span>
-                <span>🍵 Thé Hataye</span>
+                <span>🍵 Thé Hatayé</span>
                 <span>🍹 Jus en bouteille</span>
                 <span>👨‍👩‍👧‍👦 Familial</span>
               </div>
