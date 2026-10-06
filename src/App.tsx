@@ -185,7 +185,7 @@ const socialLinks: SocialLink[] = [
   },
   {
     name: "Facebook",
-    handle: "Diambo Resto",
+    handle: "@diamboresto",
     url: "https://www.facebook.com/profile.php?id=61593814721796",
     icon: "facebook",
   },
