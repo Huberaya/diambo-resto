@@ -662,7 +662,7 @@ function App() {
                 <div className="eyebrow"><span className="eyebrow-line" /> La carte</div>
                 <h2>Les incontournables<br /><em>de la maison.</em></h2>
               </div>
-              <div className="menu-intro"><p>Une sélection de spécialités ouest-africaines, choisies pour leur caractère et leur générosité.</p><a href="https://diambo-resto.fr" target="_blank" rel="noreferrer" className="text-link" data-cursor="voir la carte">Carte complète <Icon name="arrowUpRight" size={18} /></a></div>
+              <div className="menu-intro"><p>Une sélection de spécialités ouest-africaines, choisies pour leur caractère et leur générosité.</p><a href="/menu.html" className="text-link" data-cursor="voir la carte">Carte complète <Icon name="arrowUpRight" size={18} /></a></div>
             </Reveal>
 
             <div className="menu-toolbar" role="tablist" aria-label="Filtrer la carte">
