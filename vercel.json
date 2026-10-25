@@ -1,0 +1,25 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/menu",
+      "destination": "/menu.html",
+      "permanent": true
+    },
+    {
+      "source": "/menu/",
+      "destination": "/menu.html",
+      "permanent": true
+    },
+    {
+      "source": "/reseaux",
+      "destination": "/reseaux.html",
+      "permanent": true
+    },
+    {
+      "source": "/reseaux/",
+      "destination": "/reseaux.html",
+      "permanent": true
+    }
+  ]
+}
