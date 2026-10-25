@@ -55,7 +55,7 @@ const menuItems: MenuItem[] = [
   },
   {
     name: "Thiéb au poisson",
-    detail: "Le plat national — riz au poisson en sauce tomate, légumes fondants",
+    detail: "Dans l'esprit du thiéboudienne — riz au poisson en sauce tomate, légumes fondants",
     price: "10 €",
     category: "signature",
     tag: "Tradition",
@@ -343,10 +343,11 @@ function Logo({ light = false }: { light?: boolean }) {
   );
 }
 
-function Reveal({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+function Reveal({ children, className = "", delay = 0, id }: { children: React.ReactNode; className?: string; delay?: number; id?: string }) {
   const reduceMotion = useReducedMotion();
   return (
     <motion.div
+      id={id}
       className={className}
       initial={reduceMotion ? false : { opacity: 0, y: 28 }}
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
@@ -566,20 +567,20 @@ function App() {
               animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             >
-              <div className="eyebrow light-eyebrow"><span className="eyebrow-line" /> Paris 11e <span className="eyebrow-dot" /> Rue Neuve des Boulets</div>
+              <div className="eyebrow light-eyebrow"><span className="eyebrow-line" /> Paris 11e <span className="eyebrow-dot" /> Nation <span className="eyebrow-dot" /> Rue Neuve des Boulets</div>
               <h1>
-                <span className="hero-title-small">Les saveurs de</span>
+                <span className="hero-title-small">Diambo Resto — saveurs de</span>
                 <span className="hero-title-main">l'Afrique</span>
                 <span className="hero-title-script">de l'Ouest</span>
               </h1>
-              <p className="hero-lead">Une table généreuse, authentique et vivante au coeur du 11e.</p>
+              <p className="hero-lead">Cuisine d'Afrique de l'Ouest à Paris 11e, près de Nation — généreuse, authentique et vivante.</p>
               <div className="hero-actions">
                 <button className="button button-primary" onClick={() => scrollTo("carte")} data-cursor="découvrir">
                   <span>Découvrir la carte</span><Icon name="arrow" size={18} />
                 </button>
-                <a className="button button-ghost" href="https://diambo-resto.fr" target="_blank" rel="noreferrer" data-cursor="commander">
-                  Commander en ligne <Icon name="arrowUpRight" size={18} />
-                </a>
+                <button className="button button-ghost" onClick={() => scrollTo("commander")} data-cursor="commander">
+                  Commander en ligne <Icon name="arrow" size={18} />
+                </button>
               </div>
               <div className="hero-note"><span className="hero-note-stars">★★★★★</span> 4,4/5 sur Google <span className="hero-note-separator" /> 116 avis</div>
             </motion.div>
@@ -609,7 +610,7 @@ function App() {
           <div className="hero-bottom page-width">
             <div className="hero-location"><Icon name="pin" size={16} /> 28 Rue Neuve des Boulets, 75011 Paris</div>
             <button className="scroll-cue" onClick={() => scrollTo("adresse")} data-cursor="explorer"><span>Scroll pour explorer</span><span className="scroll-line" /></button>
-            <div className="hero-status"><span className="status-pulse" /> Ouvert aujourd'hui <span>•</span> jusqu'à 02:00</div>
+            <div className="hero-status"><span className="status-pulse" /> Tous les jours <span>•</span> 08:00 — 02:00</div>
           </div>
         </section>
 
@@ -644,12 +645,12 @@ function App() {
             <Reveal className="story-copy" delay={0.1}>
               <div className="eyebrow"><span className="eyebrow-line" /> L'adresse</div>
               <h2>Ici, on est en <em>famille.</em></h2>
-              <p>Chez Diambo, on ne vient pas juste manger — on vient retrouver l'ambiance d'une grande famille. On s'installe, on discute, on partage un plat, on regarde le match ensemble sur grand écran. C'est convivial, chaleureux, vivant.</p>
+              <p>Chez Diambo, au 28 Rue Neuve des Boulets près de Nation, on ne vient pas juste manger — on vient retrouver l'ambiance d'une grande famille. On s'installe, on discute, on partage un plat, on regarde le match ensemble sur grand écran. C'est convivial, chaleureux, vivant.</p>
               <p>Les habitués le savent : entre le thé Hatayé servi dans les règles de l'art, les jus de bissap, gingembre et tamarin faits maison en bouteille, et les plats généreux qui sentent bon l'Afrique de l'Ouest, on se sent chez soi.</p>
               <div className="story-signature">Bienvenue dans la famille <span>✦</span></div>
               <div className="story-actions">
                 <a className="text-link" href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer" data-cursor="itinéraire"><span>Voir l'itinéraire</span><Icon name="arrowUpRight" size={18} /></a>
-                <span className="story-address"><Icon name="pin" size={16} /> 28 Rue Neuve des Boulets</span>
+                <span className="story-address"><Icon name="pin" size={16} /> 28 Rue Neuve des Boulets, Paris 11e</span>
               </div>
             </Reveal>
           </div>
@@ -660,9 +661,9 @@ function App() {
             <Reveal className="section-heading menu-heading">
               <div>
                 <div className="eyebrow"><span className="eyebrow-line" /> La carte</div>
-                <h2>Les incontournables<br /><em>de la maison.</em></h2>
+                <h2>Nos spécialités<br /><em>ouest-africaines.</em></h2>
               </div>
-              <div className="menu-intro"><p>Une sélection de spécialités ouest-africaines, choisies pour leur caractère et leur générosité.</p><a href="/menu.html" className="text-link" data-cursor="voir la carte">Carte complète <Icon name="arrowUpRight" size={18} /></a></div>
+              <div className="menu-intro"><p>Thiéb, yassa, maffé et poisson braisé : nos spécialités ouest-africaines, généreuses comme à la maison.</p><a href="/menu.html" className="text-link" data-cursor="voir la carte">Carte complète <Icon name="arrowUpRight" size={18} /></a></div>
             </Reveal>
 
             <div className="menu-toolbar" role="tablist" aria-label="Filtrer la carte">
@@ -688,8 +689,8 @@ function App() {
               ))}
             </div>
 
-            <Reveal className="menu-footer">
-              <p>Les tarifs et disponibilités peuvent évoluer. Consultez la carte actuelle sur notre site ou les plateformes de commande.</p>
+            <Reveal className="menu-footer" id="commander">
+              <p><strong>Commander en ligne :</strong> choisissez votre plateforme. Les tarifs et disponibilités peuvent évoluer.</p>
               <div className="order-links">
                 <a href="https://www.ubereats.com/fr/store/diambo-resto/vQN5B1ZFSK6dT9vy7j52Vw" target="_blank" rel="noreferrer" data-cursor="Uber Eats">Uber Eats <Icon name="arrowUpRight" size={16} /></a>
                 <a href="https://deliveroo.fr/fr/menu/paris/11eme-nation/diambo-resto" target="_blank" rel="noreferrer" data-cursor="Deliveroo">Deliveroo <Icon name="arrowUpRight" size={16} /></a>
@@ -802,11 +803,11 @@ function App() {
               ))}
             </div>
             <Reveal className="social-web" delay={0.26}>
-              <a className="social-web-card" href="https://diambo-resto.fr" target="_blank" rel="noreferrer" data-cursor="commander">
-                <span className="social-card-icon"><Icon name="globe" size={22} /></span>
+              <a className="social-web-card" href="#commander" data-cursor="commander">
+                <span className="social-card-icon"><Icon name="utensils" size={22} /></span>
                 <span className="social-web-copy">
-                  <strong>Site internet</strong>
-                  <small>diambo-resto.fr — carte complète & commande en ligne</small>
+                  <strong>Commander en ligne</strong>
+                  <small>Uber Eats ou Deliveroo — choisissez votre plateforme</small>
                 </span>
                 <Icon name="arrowUpRight" size={18} />
               </a>
@@ -822,7 +823,7 @@ function App() {
             <Reveal className="contact-copy">
               <div className="eyebrow light-eyebrow"><span className="eyebrow-line" /> Venir chez nous</div>
               <h2>Le meilleur moyen de nous trouver ? <em>Venir.</em></h2>
-              <p>Une adresse simple à retenir, au coeur du 11e. Prenez place, emportez votre plat ou faites-vous livrer.</p>
+              <p>Au 28 Rue Neuve des Boulets, près de Nation et de la station Rue des Boulets. Prenez place, emportez votre plat ou faites-vous livrer.</p>
               <div className="contact-actions"><a className="button button-cream" href="tel:+33980726675"><Icon name="call" size={18} /> Appeler</a><a className="button button-outline-light" href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer"><Icon name="compass" size={18} /> Itinéraire</a></div>
               <div className="contact-social">
                 <small>Suivez-nous</small>
@@ -839,7 +840,7 @@ function App() {
               <div className="contact-detail"><span className="contact-icon"><Icon name="pin" size={20} /></span><div><small>Adresse</small><strong>28 Rue Neuve des Boulets<br />75011 Paris</strong></div></div>
               <div className="contact-detail"><span className="contact-icon"><Icon name="call" size={20} /></span><div><small>Téléphone</small><strong>09 80 72 66 75</strong></div></div>
               <div className="contact-detail"><span className="contact-icon"><Icon name="utensils" size={20} /></span><div><small>Services</small><strong>Sur place · À emporter<br />Livraison · Sport à l'écran</strong></div></div>
-              <div className="contact-hours"><span className="status-pulse" /> Ouvert aujourd'hui <strong>jusqu'à 02:00</strong></div>
+              <div className="contact-hours"><span className="status-pulse" /> Horaires <strong>Tous les jours · 08:00 — 02:00</strong></div>
             </Reveal>
           </div>
         </section>
@@ -849,7 +850,7 @@ function App() {
         <div className="page-width footer-top">
           <div className="footer-brand">
             <a href="#accueil" className="footer-logo" aria-label="Diambo Resto, retour à l'accueil"><img src="/logo.jpg" alt="Logo Diambo Resto" width={967} height={977} loading="lazy" /></a>
-            <p>Les saveurs de l'Afrique de l'Ouest<br />au coeur du 11e arrondissement.</p>
+            <p>Les saveurs de l'Afrique de l'Ouest<br />à Paris 11e, près de Nation.</p>
             <div className="footer-social">
               <small>Suivez-nous</small>
               <div className="footer-social-icons">
@@ -861,7 +862,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="footer-links"><div><small>Navigation</small><a href="#accueil">Accueil</a><a href="#carte">La carte</a><a href="#adresse">L'adresse</a><a href="#reseaux">Réseaux sociaux</a></div><div><small>Commander</small><a href="https://diambo-resto.fr" target="_blank" rel="noreferrer">Site web</a><a href="https://www.ubereats.com/fr/store/diambo-resto/vQN5B1ZFSK6dT9vy7j52Vw" target="_blank" rel="noreferrer">Uber Eats</a><a href="https://deliveroo.fr/fr/menu/paris/11eme-nation/diambo-resto" target="_blank" rel="noreferrer">Deliveroo</a></div><div><small>Contact</small><a href="tel:+33980726675">09 80 72 66 75</a><a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer">Itinéraire</a><span>Paris 11e</span></div></div>
+          <div className="footer-links"><div><small>Navigation</small><a href="#accueil">Accueil</a><a href="#carte">La carte</a><a href="#adresse">L'adresse</a><a href="#reseaux">Réseaux sociaux</a></div><div><small>Commander</small><a href="#commander">Commander en ligne</a><a href="https://www.ubereats.com/fr/store/diambo-resto/vQN5B1ZFSK6dT9vy7j52Vw" target="_blank" rel="noreferrer">Uber Eats</a><a href="https://deliveroo.fr/fr/menu/paris/11eme-nation/diambo-resto" target="_blank" rel="noreferrer">Deliveroo</a></div><div><small>Contact</small><a href="tel:+33980726675">09 80 72 66 75</a><a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer">Itinéraire</a><span>Paris 11e</span></div></div>
         </div>
         <div className="page-width footer-bottom"><span>© 2025 DIAMBO RESTO</span><span>Une table, un quartier, une histoire.</span><a href="#accueil">Retour en haut <Icon name="arrow" size={15} /></a></div>
       </footer>
@@ -871,7 +872,7 @@ function App() {
         <a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer" aria-label="Itinéraire vers Diambo Resto"><Icon name="pin" size={20} /></a>
       </div>
 
-      <div className="mobile-bottom-bar"><a href="tel:+33980726675"><Icon name="call" size={17} /> Appeler</a><a href="https://diambo-resto.fr" target="_blank" rel="noreferrer"><Icon name="utensils" size={17} /> Commander</a></div>
+      <div className="mobile-bottom-bar"><a href="tel:+33980726675"><Icon name="call" size={17} /> Appeler</a><a href="#commander"><Icon name="utensils" size={17} /> Commander</a></div>
     </div>
   );
 }
