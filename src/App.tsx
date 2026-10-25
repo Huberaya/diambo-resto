@@ -334,7 +334,7 @@ function Icon({ name, size = 20, strokeWidth = 1.6 }: { name: IconName; size?: n
 function Logo({ light = false }: { light?: boolean }) {
   return (
     <a href="#accueil" className={`brand ${light ? "brand-light" : ""}`} aria-label="Diambo Resto, accueil">
-      <span className="brand-mark">D</span>
+      <img className="brand-mark" src="/logo-mark.jpg" alt="" width={42} height={42} />
       <span className="brand-copy">
         <strong>DIAMBO</strong>
         <small>RESTO</small>
@@ -848,7 +848,7 @@ function App() {
       <footer className="site-footer">
         <div className="page-width footer-top">
           <div className="footer-brand">
-            <Logo light />
+            <a href="#accueil" className="footer-logo" aria-label="Diambo Resto, retour à l'accueil"><img src="/logo.jpg" alt="Logo Diambo Resto" width={967} height={977} loading="lazy" /></a>
             <p>Les saveurs de l'Afrique de l'Ouest<br />au coeur du 11e arrondissement.</p>
             <div className="footer-social">
               <small>Suivez-nous</small>
