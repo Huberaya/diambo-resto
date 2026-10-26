@@ -25,7 +25,7 @@
     <meta property="og:image" content="https://www.diambo-resto.fr/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Logo de Diambo Resto — cuisine d'Afrique de l'Ouest à Paris 11" />
+    <meta property="og:image:alt" content="Logo Diambo Resto — Saveurs de l'Afrique de l'Ouest, restaurant africain à Paris 11e" />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -42,12 +42,24 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "@id": "https://www.diambo-resto.fr/#restaurant",
-      "name": "Diambo Resto",
-      "url": "https://www.diambo-resto.fr/",
-      "image": "https://images.pexels.com/photos/20067063/pexels-photo-20067063.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=630",
-      "logo": "https://www.diambo-resto.fr/logo.jpg",
+      "@graph": [
+        {
+          "@type": "Restaurant",
+          "@id": "https://www.diambo-resto.fr/#restaurant",
+          "name": "Diambo Resto",
+          "slogan": "Saveurs de l'Afrique de l'Ouest",
+          "url": "https://www.diambo-resto.fr/",
+          "image": [
+            "https://images.pexels.com/photos/20067063/pexels-photo-20067063.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=630",
+            "https://www.diambo-resto.fr/logo.jpg",
+            "https://www.diambo-resto.fr/og-image.jpg"
+          ],
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.diambo-resto.fr/logo.jpg",
+            "width": 1000,
+            "height": 972
+          },
       "description": "Cuisine d'Afrique de l'Ouest au coeur du 11e arrondissement de Paris : thiéb, yassa, maffé, poisson braisé, jus de bissap, gingembre et tamarin faits maison, et le rituel du thé Hatayé. Sur place, à emporter et en livraison.",
       "telephone": "+33 9 80 72 66 75",
       "priceRange": "€",
@@ -80,6 +92,72 @@
         "https://www.tiktok.com/@diamboresto",
         "https://www.ubereats.com/fr/store/diambo-resto/vQN5B1ZFSK6dT9vy7j52Vw",
         "https://deliveroo.fr/fr/menu/paris/11eme-nation/diambo-resto"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.diambo-resto.fr/#website",
+          "url": "https://www.diambo-resto.fr/",
+          "name": "Diambo Resto",
+          "alternateName": "DIAMBO RESTO",
+          "inLanguage": "fr-FR",
+          "publisher": { "@id": "https://www.diambo-resto.fr/#restaurant" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.diambo-resto.fr/#faq",
+          "about": { "@id": "https://www.diambo-resto.fr/#restaurant" },
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Où se trouve Diambo Resto à Paris 11e ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Diambo Resto est situé au 28 Rue Neuve des Boulets, 75011 Paris, à quelques minutes de la place de la Nation et de la station Rue des Boulets (ligne 9)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quels sont les horaires d'ouverture de Diambo Resto ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le restaurant est ouvert tous les jours de 08:00 à 02:00, du petit matin jusqu'au bout de la nuit."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quels plats d'Afrique de l'Ouest peut-on déguster chez Diambo Resto ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Thiéb au poulet ou au poisson (dans l'esprit du thiéboudienne), yassa poulet, maffé, poisson braisé avec attiéké et alloco, saga-saga et ganna — sans oublier les jus faits maison (bissap, gingembre, tamarin, baobab), les desserts au mil (sombi, fondé, dégué) et le thé Hatayé."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quels sont les prix chez Diambo Resto ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Les plats sont entre 9 € et 12 €, les entrées dès 3 € et les jus maison dès 1,50 €. Retrouvez la carte complète avec les prix sur la page https://www.diambo-resto.fr/menu.html."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Peut-on commander à emporter ou en livraison ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui : sur place, à emporter en appelant le 09 80 72 66 75, et en livraison via Uber Eats et Deliveroo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Peut-on regarder les matchs chez Diambo Resto ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, les matchs sont diffusés sur grand écran, dans une ambiance conviviale et familiale."
+              }
+            }
+          ]
+        }
       ]
     }
     </script>
