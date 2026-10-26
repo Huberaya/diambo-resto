@@ -818,6 +818,42 @@ function App() {
           </div>
         </section>
 
+        <section id="faq" className="faq-section section-ivory">
+          <div className="page-width">
+            <Reveal className="faq-header">
+              <div className="eyebrow"><span className="eyebrow-line" /> Questions fréquentes</div>
+              <h2>Avant de venir,<br /><em>on vous dit tout.</em></h2>
+              <p>Adresse, horaires, plats signatures, prix et livraison : les réponses aux questions que l'on nous pose le plus souvent.</p>
+            </Reveal>
+            <div className="faq-grid">
+              <Reveal className="faq-item">
+                <h3>Où se trouve Diambo Resto à Paris 11e ?</h3>
+                <p>Diambo Resto est situé au 28 Rue Neuve des Boulets, 75011 Paris, à quelques minutes de la place de la Nation et de la station Rue des Boulets (ligne 9).</p>
+              </Reveal>
+              <Reveal className="faq-item" delay={0.06}>
+                <h3>Quels sont les horaires d'ouverture de Diambo Resto ?</h3>
+                <p>Le restaurant est ouvert tous les jours de 08:00 à 02:00, du petit matin jusqu'au bout de la nuit.</p>
+              </Reveal>
+              <Reveal className="faq-item" delay={0.12}>
+                <h3>Quels plats d'Afrique de l'Ouest peut-on déguster chez Diambo Resto ?</h3>
+                <p>Thiéb au poulet ou au poisson (dans l'esprit du thiéboudienne), yassa poulet, maffé, poisson braisé avec attiéké et alloco, saga-saga et ganna — sans oublier les jus faits maison (bissap, gingembre, tamarin, baobab), les desserts au mil (sombi, fondé, dégué) et le thé Hatayé.</p>
+              </Reveal>
+              <Reveal className="faq-item">
+                <h3>Quels sont les prix chez Diambo Resto ?</h3>
+                <p>Les plats sont entre 9 € et 12 €, les entrées dès 3 € et les jus maison dès 1,50 €. Retrouvez la <a href="/menu.html">carte complète avec les prix</a> en ligne.</p>
+              </Reveal>
+              <Reveal className="faq-item" delay={0.06}>
+                <h3>Peut-on commander à emporter ou en livraison ?</h3>
+                <p>Oui : sur place, à emporter en appelant le <a href="tel:+33980726675">09 80 72 66 75</a>, et en livraison via Uber Eats et Deliveroo.</p>
+              </Reveal>
+              <Reveal className="faq-item" delay={0.12}>
+                <h3>Peut-on regarder les matchs chez Diambo Resto ?</h3>
+                <p>Oui, les matchs sont diffusés sur grand écran, dans une ambiance conviviale et familiale.</p>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
         <section id="contact" className="contact-section section-terracotta">
           <div className="page-width contact-grid">
             <Reveal className="contact-copy">
@@ -849,7 +885,7 @@ function App() {
       <footer className="site-footer">
         <div className="page-width footer-top">
           <div className="footer-brand">
-            <a href="#accueil" className="footer-logo" aria-label="Diambo Resto, retour à l'accueil"><img src="/logo.jpg" alt="Logo Diambo Resto" width={967} height={977} loading="lazy" /></a>
+            <a href="#accueil" className="footer-logo" aria-label="Diambo Resto, retour à l'accueil"><img src="/logo.jpg" alt="Logo Diambo Resto — Saveurs de l'Afrique de l'Ouest, restaurant africain à Paris 11e" width={1000} height={972} loading="lazy" /></a>
             <p>Les saveurs de l'Afrique de l'Ouest<br />à Paris 11e, près de Nation.</p>
             <div className="footer-social">
               <small>Suivez-nous</small>
@@ -862,7 +898,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="footer-links"><div><small>Navigation</small><a href="#accueil">Accueil</a><a href="#carte">La carte</a><a href="#adresse">L'adresse</a><a href="#reseaux">Réseaux sociaux</a></div><div><small>Commander</small><a href="#commander">Commander en ligne</a><a href="https://www.ubereats.com/fr/store/diambo-resto/vQN5B1ZFSK6dT9vy7j52Vw" target="_blank" rel="noreferrer">Uber Eats</a><a href="https://deliveroo.fr/fr/menu/paris/11eme-nation/diambo-resto" target="_blank" rel="noreferrer">Deliveroo</a></div><div><small>Contact</small><a href="tel:+33980726675">09 80 72 66 75</a><a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer">Itinéraire</a><span>Paris 11e</span></div></div>
+          <div className="footer-links"><div><small>Navigation</small><a href="#accueil">Accueil</a><a href="#carte">La carte</a><a href="#adresse">L'adresse</a><a href="#faq">Questions fréquentes</a><a href="#reseaux">Réseaux sociaux</a></div><div><small>Commander</small><a href="#commander">Commander en ligne</a><a href="https://www.ubereats.com/fr/store/diambo-resto/vQN5B1ZFSK6dT9vy7j52Vw" target="_blank" rel="noreferrer">Uber Eats</a><a href="https://deliveroo.fr/fr/menu/paris/11eme-nation/diambo-resto" target="_blank" rel="noreferrer">Deliveroo</a></div><div><small>Contact</small><a href="tel:+33980726675">09 80 72 66 75</a><a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer">Itinéraire</a><span>Paris 11e</span></div></div>
         </div>
         <div className="page-width footer-bottom"><span>© 2025 DIAMBO RESTO</span><span>Une table, un quartier, une histoire.</span><a href="#accueil">Retour en haut <Icon name="arrow" size={15} /></a></div>
       </footer>

@@ -1,20 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.diambo-resto.fr/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/logo.jpg</image:loc>
+      <image:title>Logo Diambo Resto — Saveurs de l'Afrique de l'Ouest, restaurant africain à Paris 11e</image:title>
+      <image:caption>Logo officiel de Diambo Resto, restaurant d'Afrique de l'Ouest au 28 Rue Neuve des Boulets, Paris 11e, près de Nation.</image:caption>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
   </url>
   <url>
     <loc>https://www.diambo-resto.fr/menu.html</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/entrees/brochette-agneau.jpg</image:loc>
+      <image:title>Brochette d'agneau — Diambo Resto, restaurant africain Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/entrees/poisson.jpg</image:loc>
+      <image:title>Poisson grillé — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/entrees/alloco.jpg</image:loc>
+      <image:title>Alloco (bananes plantain frites) — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/entrees/poulet.jpg</image:loc>
+      <image:title>Poulet grillé — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/entrees/sauce.jpg</image:loc>
+      <image:title>Sauce maison — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/entrees/riz-blanc.jpg</image:loc>
+      <image:title>Riz blanc — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/entrees/salade.jpg</image:loc>
+      <image:title>Salade fraîche — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/desserts/sombi.jpg</image:loc>
+      <image:title>Sombi, dessert maison au mil — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/desserts/fonde.jpg</image:loc>
+      <image:title>Fondé, dessert maison au mil — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/desserts/degue.jpg</image:loc>
+      <image:title>Dégué, dessert maison au mil — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/boissons/baobab.jpg</image:loc>
+      <image:title>Jus de baobab (pain de singe) fait maison — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/boissons/the-hataye.jpg</image:loc>
+      <image:title>Thé Hatayé, le rituel du thé ouest-africain — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/boissons/cafe.jpg</image:loc>
+      <image:title>Café au comptoir — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/boissons/cafe-allonge.jpg</image:loc>
+      <image:title>Café allongé — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/boissons/cafe-creme.jpg</image:loc>
+      <image:title>Café crème — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/boissons/the-noir.jpg</image:loc>
+      <image:title>Thé — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/boissons/the-lait.jpg</image:loc>
+      <image:title>Thé au lait — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/boissons/sodas.jpg</image:loc>
+      <image:title>Boissons fraîches 33 cl — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/boissons/vita-malt.jpg</image:loc>
+      <image:title>Vita Malt — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/boissons/diabolo.jpg</image:loc>
+      <image:title>Diabolo (sirop) — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/boissons/eau.jpg</image:loc>
+      <image:title>Eau minérale — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
   </url>
   <url>
     <loc>https://www.diambo-resto.fr/reseaux.html</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
