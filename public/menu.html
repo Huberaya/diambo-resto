@@ -8,6 +8,8 @@
 <title>Carte &amp; Menu – Restaurant africain Paris 11e | Diambo Resto</title>
 <link rel="canonical" href="https://www.diambo-resto.fr/menu.html" />
 <meta name="robots" content="index, follow" />
+<link rel="icon" type="image/png" sizes="48x48" href="/icon-48.png" />
+<link rel="icon" type="image/png" sizes="96x96" href="/icon-96.png" />
 <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
 <link rel="shortcut icon" href="/favicon.ico" />
@@ -19,6 +21,84 @@
 <meta property="og:url" content="https://www.diambo-resto.fr/menu.html" />
 <meta property="og:image" content="https://www.diambo-resto.fr/og-image.jpg" />
 <meta property="og:image:alt" content="Logo Diambo Resto — Saveurs de l'Afrique de l'Ouest, restaurant africain à Paris 11e" />
+<!-- Données structurées : fil d'Ariane + carte complète (plats et prix) pour Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.diambo-resto.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "Carte & Menu", "item": "https://www.diambo-resto.fr/menu.html" }
+      ]
+    },
+    {
+      "@type": "Menu",
+      "@id": "https://www.diambo-resto.fr/menu.html#menu",
+      "name": "Carte de Diambo Resto — restaurant africain à Paris 11e",
+      "inLanguage": "fr-FR",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Entrées & accompagnements",
+          "hasMenuItem": [
+            { "@type": "MenuItem", "name": "Brochette agneau", "offers": { "@type": "Offer", "price": "4.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Poisson simple", "offers": { "@type": "Offer", "price": "5.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Alloco simple", "offers": { "@type": "Offer", "price": "4.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Poulet simple", "offers": { "@type": "Offer", "price": "3.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Sauce simple", "offers": { "@type": "Offer", "price": "5.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Riz blanc", "offers": { "@type": "Offer", "price": "4.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Salade simple", "offers": { "@type": "Offer", "price": "3.00", "priceCurrency": "EUR" } }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Plats d'Afrique de l'Ouest",
+          "hasMenuItem": [
+            { "@type": "MenuItem", "name": "Thieb poulet", "description": "Riz parfumé au poulet, légumes de saison mijotés", "offers": { "@type": "Offer", "price": "10.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Thieb poisson", "description": "Dans l'esprit du thiéboudienne : riz au poisson en sauce tomate, légumes fondants", "offers": { "@type": "Offer", "price": "10.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Poisson braisé + attiéké", "description": "Poisson entier grillé, semoule de manioc, condiments frais", "offers": { "@type": "Offer", "price": "10.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Poisson braisé + attiéké + alloco", "description": "La version complète, alloco doré en plus", "offers": { "@type": "Offer", "price": "12.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Yassa poulet", "description": "Poulet rôti, oignons confits au citron et moutarde douce", "offers": { "@type": "Offer", "price": "9.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Maffé", "description": "Sauce onctueuse à l'arachide, riz blanc et légumes", "offers": { "@type": "Offer", "price": "9.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Saga-saga", "description": "Feuilles de manioc en sauce, servies avec riz blanc", "offers": { "@type": "Offer", "price": "9.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Ganna", "description": "Plat traditionnel généreux, recette maison", "offers": { "@type": "Offer", "price": "9.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Nandji", "offers": { "@type": "Offer", "price": "9.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Poulet braisé + alloco + salade", "offers": { "@type": "Offer", "price": "10.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Tau — semoule de maïs", "offers": { "@type": "Offer", "price": "10.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Bassi — couscous de mil", "offers": { "@type": "Offer", "price": "10.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Couscous — semoule de blé", "offers": { "@type": "Offer", "price": "10.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Fakoye", "offers": { "@type": "Offer", "price": "9.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Diouka", "offers": { "@type": "Offer", "price": "10.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Fonio", "offers": { "@type": "Offer", "price": "10.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Tacos", "offers": { "@type": "Offer", "price": "8.00", "priceCurrency": "EUR" } }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Desserts",
+          "hasMenuItem": [
+            { "@type": "MenuItem", "name": "Sombi", "description": "Douceur maison au mil", "offers": { "@type": "Offer", "price": "4.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Fondé", "description": "Douceur maison au mil", "offers": { "@type": "Offer", "price": "4.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Dégué", "description": "Douceur maison au mil", "offers": { "@type": "Offer", "price": "4.00", "priceCurrency": "EUR" } }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Jus faits maison",
+          "hasMenuItem": [
+            { "@type": "MenuItem", "name": "Jus de gingembre", "description": "Jus fait maison en bouteille — 25 cl dès 1,50 €, 50 cl : 3,00 €", "offers": { "@type": "Offer", "price": "1.50", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Jus de tamarin", "description": "Jus fait maison en bouteille — 25 cl dès 1,50 €, 50 cl : 3,00 €", "offers": { "@type": "Offer", "price": "1.50", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Jus de baobab", "description": "Jus fait maison en bouteille — 25 cl dès 1,50 €, 50 cl : 3,00 €", "offers": { "@type": "Offer", "price": "1.50", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Jus de bissap", "description": "Jus fait maison en bouteille — 25 cl dès 1,50 €, 50 cl : 3,00 €", "offers": { "@type": "Offer", "price": "1.50", "priceCurrency": "EUR" } }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -170,7 +250,7 @@
     </div>
     <div class="grid">
       <article class="dish">
-        <div class="dish-img"><span class="tag">Le classique</span><div><img src="https://images.pexels.com/photos/33434014/pexels-photo-33434014.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=640&h=640" alt="Thieb poulet" loading="eager" /></div></div>
+        <div class="dish-img"><span class="tag">Le classique</span><div><img src="https://images.pexels.com/photos/33434014/pexels-photo-33434014.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=640&h=640" alt="Thieb poulet" loading="eager" fetchpriority="high" /></div></div>
         <h3>Thieb poulet</h3><p class="desc">Riz parfumé au poulet, légumes de saison mijotés</p><span class="price">10 €</span>
       </article>
       <article class="dish">
@@ -331,7 +411,7 @@
     <div class="orn">❦</div>
     <div class="addr">28 Rue Neuve des Boulets, 75011 Paris<br /><a href="tel:+33980726675">09 80 72 66 75</a></div>
     <div class="hours">Tous les jours · 08:00 — 02:00</div>
-    <div class="site"><a href="https://www.diambo-resto.fr/">diambo-resto.fr</a></div>
+    <div class="site"><a href="https://www.diambo-resto.fr/">Accueil</a> · <a href="https://www.diambo-resto.fr/#faq">Questions fréquentes</a> · <a href="/reseaux.html">Nos réseaux</a> · <a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris">Itinéraire</a></div>
   </footer>
 
 </div></div>
