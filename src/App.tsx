@@ -677,7 +677,7 @@ function App() {
               {filteredMenu.map((item, index) => (
                 <motion.article className="menu-item" key={item.name} layout initial={reduceMotion ? false : { opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: reduceMotion ? 0 : index * 0.06 }} data-cursor="goûter">
                   <div className="menu-image-wrap">
-                    <img src={item.image} alt={item.name} loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                    <img src={item.image} alt={`${item.name} — ${item.detail} (Diambo Resto, Paris 11e)`} loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                     {item.tag && <span className="menu-tag">{item.tag}</span>}
                     <div className="menu-image-overlay"><span>Découvrir</span><Icon name="arrowUpRight" size={18} /></div>
                   </div>
@@ -777,7 +777,7 @@ function App() {
                 </Reveal>
               ))}
             </div>
-            <Reveal className="reviews-cta"><a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer" className="text-link" data-cursor="avis"><span>Voir les 116 avis Google</span><Icon name="arrowUpRight" size={18} /></a></Reveal>
+            <Reveal className="reviews-cta"><a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer" className="text-link" data-cursor="avis"><span>Voir les 116 avis Google</span><Icon name="arrowUpRight" size={18} /></a><a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer" className="text-link" data-cursor="avis"><span>Laisser un avis Google</span><Icon name="arrowUpRight" size={18} /></a></Reveal>
           </div>
         </section>
 
@@ -828,7 +828,7 @@ function App() {
             <div className="faq-grid">
               <Reveal className="faq-item">
                 <h3>Où se trouve Diambo Resto à Paris 11e ?</h3>
-                <p>Diambo Resto est situé au 28 Rue Neuve des Boulets, 75011 Paris, à quelques minutes de la place de la Nation et de la station Rue des Boulets (ligne 9).</p>
+                <p>Diambo Resto est situé au 28 Rue Neuve des Boulets, 75011 Paris, à deux pas de la station Rue des Boulets (métro ligne 9) et à quelques minutes à pied de la place de la Nation (lignes 1, 2, 6, 9 et RER A).</p>
               </Reveal>
               <Reveal className="faq-item" delay={0.06}>
                 <h3>Quels sont les horaires d'ouverture de Diambo Resto ?</h3>
@@ -859,7 +859,7 @@ function App() {
             <Reveal className="contact-copy">
               <div className="eyebrow light-eyebrow"><span className="eyebrow-line" /> Venir chez nous</div>
               <h2>Le meilleur moyen de nous trouver ? <em>Venir.</em></h2>
-              <p>Au 28 Rue Neuve des Boulets, près de Nation et de la station Rue des Boulets. Prenez place, emportez votre plat ou faites-vous livrer.</p>
+              <p>Au 28 Rue Neuve des Boulets, à deux pas de la station Rue des Boulets (ligne 9) et à quelques minutes de Nation (lignes 1, 2, 6, 9 — RER A). Prenez place, emportez votre plat ou faites-vous livrer.</p>
               <div className="contact-actions"><a className="button button-cream" href="tel:+33980726675"><Icon name="call" size={18} /> Appeler</a><a className="button button-outline-light" href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer"><Icon name="compass" size={18} /> Itinéraire</a></div>
               <div className="contact-social">
                 <small>Suivez-nous</small>
