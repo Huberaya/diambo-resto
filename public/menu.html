@@ -7,7 +7,7 @@
 <meta name="description" content="Découvrez la carte de Diambo Resto à Paris 11e : thiéb, yassa, maffé, poisson braisé, jus de bissap et thé Hatayé. Voir les plats et les prix !" />
 <title>Carte &amp; Menu – Restaurant africain Paris 11e | Diambo Resto</title>
 <link rel="canonical" href="https://www.diambo-resto.fr/menu.html" />
-<meta name="robots" content="index, follow" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 <link rel="icon" type="image/png" sizes="48x48" href="/icon-48.png" />
 <link rel="icon" type="image/png" sizes="96x96" href="/icon-96.png" />
 <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
@@ -21,6 +21,11 @@
 <meta property="og:url" content="https://www.diambo-resto.fr/menu.html" />
 <meta property="og:image" content="https://www.diambo-resto.fr/og-image.jpg" />
 <meta property="og:image:alt" content="Logo Diambo Resto — Saveurs de l'Afrique de l'Ouest, restaurant africain à Paris 11e" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Carte &amp; Menu – Restaurant africain Paris 11e | Diambo Resto" />
+<meta name="twitter:description" content="Thiéb, yassa, maffé, poisson braisé, jus de bissap et thé Hatayé : découvrez les plats et les prix de Diambo Resto à Paris 11e." />
+<meta name="twitter:image" content="https://www.diambo-resto.fr/og-image.jpg" />
+<meta name="twitter:image:alt" content="Logo Diambo Resto — Saveurs de l'Afrique de l'Ouest, restaurant africain à Paris 11e" />
 <!-- Données structurées : fil d'Ariane + carte complète (plats et prix) pour Google -->
 <script type="application/ld+json">
 {
@@ -28,16 +33,30 @@
   "@graph": [
     {
       "@type": "BreadcrumbList",
+      "@id": "https://www.diambo-resto.fr/menu.html#breadcrumb",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.diambo-resto.fr/" },
         { "@type": "ListItem", "position": 2, "name": "Carte & Menu", "item": "https://www.diambo-resto.fr/menu.html" }
       ]
     },
     {
+      "@type": "WebPage",
+      "@id": "https://www.diambo-resto.fr/menu.html#webpage",
+      "url": "https://www.diambo-resto.fr/menu.html",
+      "name": "Carte & Menu – Restaurant africain Paris 11e | Diambo Resto",
+      "description": "Découvrez la carte de Diambo Resto à Paris 11e : thiéb, yassa, maffé, poisson braisé, jus de bissap et thé Hatayé. Voir les plats et les prix !",
+      "inLanguage": "fr-FR",
+      "isPartOf": { "@id": "https://www.diambo-resto.fr/#website" },
+      "about": { "@id": "https://www.diambo-resto.fr/#restaurant" },
+      "breadcrumb": { "@id": "https://www.diambo-resto.fr/menu.html#breadcrumb" }
+    },
+    {
       "@type": "Menu",
       "@id": "https://www.diambo-resto.fr/menu.html#menu",
       "name": "Carte de Diambo Resto — restaurant africain à Paris 11e",
       "inLanguage": "fr-FR",
+      "mainEntityOfPage": { "@id": "https://www.diambo-resto.fr/menu.html#webpage" },
+      "provider": { "@id": "https://www.diambo-resto.fr/#restaurant" },
       "hasMenuSection": [
         {
           "@type": "MenuSection",
