@@ -7,7 +7,7 @@
     <title>Diambo Resto | Restaurant africain à Paris 11e – Nation</title>
     <meta name="description" content="Restaurant africain à Paris 11e, près de Nation : thiéb, yassa, maffé, poisson braisé et jus maison. Ouvert jusqu’à 2h. Découvrez la carte !" />
     <link rel="canonical" href="https://www.diambo-resto.fr/" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
     <!-- Favicon (emblème du logo) -->
     <link rel="icon" type="image/png" sizes="48x48" href="/icon-48.png" />
@@ -16,6 +16,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
 
     <!-- Open Graph / Facebook, WhatsApp, LinkedIn… -->
     <meta property="og:type" content="website" />
@@ -34,13 +35,15 @@
     <meta name="twitter:title" content="Diambo Resto | Restaurant africain à Paris 11e – Nation" />
     <meta name="twitter:description" content="Thiéb, yassa, maffé, poisson braisé, jus faits maison et thé Hatayé — 28 Rue Neuve des Boulets, Paris 11. Sur place, à emporter, livraison." />
     <meta name="twitter:image" content="https://www.diambo-resto.fr/og-image.jpg" />
+    <meta name="twitter:image:alt" content="Logo Diambo Resto — Saveurs de l'Afrique de l'Ouest, restaurant africain à Paris 11e" />
 
     <!-- Connexions anticipées (polices et photos) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://images.pexels.com" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet" />
     <!-- Préchargement de l'image principale (affichage plus rapide) -->
-    <link rel="preload" as="image" fetchpriority="high" href="https://images.pexels.com/photos/20067063/pexels-photo-20067063.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=2200&amp;h=1450" />
+    <link rel="preload" as="image" fetchpriority="high" href="https://images.pexels.com/photos/20067063/pexels-photo-20067063.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1600&amp;h=1055" />
 
     <!-- Données structurées : fiche restaurant pour Google (adresse, horaires, carte…) -->
     <script type="application/ld+json">
@@ -60,7 +63,10 @@
           ],
           "logo": {
             "@type": "ImageObject",
+            "@id": "https://www.diambo-resto.fr/#logo",
             "url": "https://www.diambo-resto.fr/logo.jpg",
+            "contentUrl": "https://www.diambo-resto.fr/logo.jpg",
+            "caption": "Logo officiel de Diambo Resto — Saveurs de l'Afrique de l'Ouest",
             "width": 1000,
             "height": 972
           },
@@ -69,6 +75,17 @@
       "priceRange": "€",
       "currenciesAccepted": "EUR",
       "servesCuisine": ["Africaine", "Cuisine d'Afrique de l'Ouest"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+33 9 80 72 66 75",
+        "contactType": "customer service",
+        "areaServed": "FR",
+        "availableLanguage": ["fr-FR"]
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Paris 11e" },
+        { "@type": "City", "name": "Paris" }
+      ],
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "28 Rue Neuve des Boulets",
@@ -108,6 +125,17 @@
           "publisher": { "@id": "https://www.diambo-resto.fr/#restaurant" }
         },
         {
+          "@type": "WebPage",
+          "@id": "https://www.diambo-resto.fr/#webpage",
+          "url": "https://www.diambo-resto.fr/",
+          "name": "Diambo Resto | Restaurant africain à Paris 11e – Nation",
+          "description": "Restaurant africain à Paris 11e, près de Nation : thiéb, yassa, maffé, poisson braisé et jus maison. Ouvert jusqu’à 2h.",
+          "inLanguage": "fr-FR",
+          "isPartOf": { "@id": "https://www.diambo-resto.fr/#website" },
+          "about": { "@id": "https://www.diambo-resto.fr/#restaurant" },
+          "primaryImageOfPage": { "@id": "https://www.diambo-resto.fr/#logo" }
+        },
+        {
           "@type": "FAQPage",
           "@id": "https://www.diambo-resto.fr/#faq",
           "about": { "@id": "https://www.diambo-resto.fr/#restaurant" },
@@ -133,7 +161,7 @@
               "name": "Quels plats d'Afrique de l'Ouest peut-on déguster chez Diambo Resto ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Thiéb au poulet ou au poisson (dans l'esprit du thiéboudienne), yassa poulet, maffé, poisson braisé avec attiéké et alloco, saga-saga et ganna — sans oublier les jus faits maison (bissap, gingembre, tamarin, baobab), les desserts au mil (sombi, fondé, dégué) et le thé Hatayé."
+                "text": "Des spécialités emblématiques du Sénégal et d'Afrique de l'Ouest : thiéb au poulet ou au poisson (dans l'esprit du thiéboudienne, ou ceebu jën), yassa poulet, maffé, poisson braisé avec attiéké et alloco, saga-saga et ganna — sans oublier les jus faits maison (bissap, gingembre, tamarin, baobab), les desserts au mil (sombi, fondé, dégué) et le thé Hatayé."
               }
             },
             {

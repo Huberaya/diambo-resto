@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -20,6 +19,7 @@ body { margin: 0; min-width: 320px; background: var(--ivory); color: var(--ink);
 button, a { font: inherit; }
 button { border: 0; cursor: pointer; }
 a { color: inherit; text-decoration: none; }
+address { font-style: normal; }
 img { display: block; max-width: 100%; }
 
 .site-shell { overflow: hidden; }
@@ -39,9 +39,9 @@ section[id] { scroll-margin-top: 96px; }
 .brand-copy strong { font-size: 17px; letter-spacing: .16em; font-weight: 800; }
 .brand-copy small { padding-left: 2px; margin-top: 6px; font-family: 'Space Grotesk', sans-serif; font-size: 8px; letter-spacing: .43em; font-weight: 600; }
 .desktop-nav { display: flex; align-items: center; gap: 34px; margin-left: 70px; }
-.desktop-nav button { position: relative; background: none; color: inherit; padding: 7px 0; font-size: 11px; text-transform: uppercase; letter-spacing: .15em; }
-.desktop-nav button::after { content: ''; position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform .45s var(--ease); }
-.desktop-nav button:hover::after { transform: scaleX(1); transform-origin: left; }
+.desktop-nav a { position: relative; background: none; color: inherit; padding: 7px 0; font-size: 11px; text-transform: uppercase; letter-spacing: .15em; }
+.desktop-nav a::after { content: ''; position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: right; transition: transform .45s var(--ease); }
+.desktop-nav a:hover::after { transform: scaleX(1); transform-origin: left; }
 .nav-actions { display: flex; align-items: center; gap: 24px; }
 .nav-phone { display: inline-flex; align-items: center; gap: 8px; font-family: 'Space Grotesk', sans-serif; font-size: 11px; letter-spacing: .08em; }
 .nav-menu-button { display: none; background: none; color: inherit; align-items: center; gap: 9px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
@@ -54,9 +54,9 @@ section[id] { scroll-margin-top: 96px; }
 .mobile-menu-top { display: flex; justify-content: space-between; align-items: center; }
 .menu-close { display: grid; place-items: center; width: 44px; height: 44px; background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; }
 .mobile-links { display: flex; flex-direction: column; margin-top: 15vh; }
-.mobile-links button { display: flex; align-items: center; gap: 18px; color: #fff; background: none; padding: 17px 0; border-bottom: 1px solid rgba(255,255,255,.2); text-align: left; font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(39px, 10vw, 72px); }
-.mobile-links button span { width: 35px; color: var(--gold); font-family: 'Space Grotesk', sans-serif; font-size: 10px; letter-spacing: .14em; }
-.mobile-links button svg { margin-left: auto; }
+.mobile-links a { display: flex; align-items: center; gap: 18px; color: #fff; background: none; padding: 17px 0; border-bottom: 1px solid rgba(255,255,255,.2); text-align: left; font-family: 'DM Serif Display', Georgia, serif; font-size: clamp(39px, 10vw, 72px); }
+.mobile-links a span { width: 35px; color: var(--gold); font-family: 'Space Grotesk', sans-serif; font-size: 10px; letter-spacing: .14em; }
+.mobile-links a svg { margin-left: auto; }
 .mobile-menu-bottom { display: flex; gap: 22px; margin-top: auto; }
 .mobile-menu-bottom a { display: flex; align-items: center; gap: 9px; color: #fff; font-size: 11px; text-transform: uppercase; letter-spacing: .12em; }
 .mobile-menu-social { display: flex; gap: 12px; margin-top: 26px; }.mobile-menu-social a { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.3); border-radius: 50%; color: #fff; transition: background .3s ease, border-color .3s ease; }.mobile-menu-social a:hover { background: var(--terracotta); border-color: var(--terracotta); }
