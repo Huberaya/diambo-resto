@@ -38,12 +38,22 @@ type MenuItem = {
   category: MenuCategory;
   image: string;
   tag?: string;
+  featured?: boolean;
 };
 
 const fallbackImage =
   "https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1200&q=85";
 
 const menuItems: MenuItem[] = [
+  {
+    name: "Thiéb au poisson",
+    detail: "Dans l'esprit du thiéboudienne — riz au poisson en sauce tomate, légumes fondants",
+    price: "10 €",
+    category: "signature",
+    tag: "Plat national",
+    featured: true,
+    image: "/images/plats/thieb-poisson.jpg",
+  },
   {
     name: "Thiéb au poulet",
     detail: "Riz parfumé au poulet, légumes de saison mijotés",
@@ -54,12 +64,12 @@ const menuItems: MenuItem[] = [
       "https://images.pexels.com/photos/33434014/pexels-photo-33434014.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
   },
   {
-    name: "Thiéb au poisson",
-    detail: "Dans l'esprit du thiéboudienne — riz au poisson en sauce tomate, légumes fondants",
-    price: "10 €",
+    name: "Poisson braisé + attiéké + alloco",
+    detail: "Poisson grillé, semoule de manioc et alloco doré",
+    price: "12 €",
     category: "signature",
-    tag: "Tradition",
-    image: "/images/plats/thieb-poisson.jpg",
+    tag: "Signature généreuse",
+    image: "/images/plats/poisson-braise-attieke-alloco.jpg",
   },
   {
     name: "Poisson braisé",
@@ -74,6 +84,7 @@ const menuItems: MenuItem[] = [
     detail: "Poulet rôti, oignons confits au citron et moutarde douce",
     price: "9 €",
     category: "signature",
+    tag: "Mijoté signature",
     image:
       "https://images.pexels.com/photos/17696671/pexels-photo-17696671.jpeg?auto=compress&cs=tinysrgb&dpr=2&fit=crop&w=1200&h=950",
   },
@@ -81,16 +92,10 @@ const menuItems: MenuItem[] = [
     name: "Maffé",
     detail: "Sauce onctueuse à l'arachide, riz blanc et légumes",
     price: "9 €",
-    category: "classics",
+    category: "signature",
+    tag: "Sauce veloutée",
     image:
       "https://images.pexels.com/photos/998244/pexels-photo-998244.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
-  },
-  {
-    name: "Poisson braisé + attiéké + alloco",
-    detail: "Poisson grillé, semoule de manioc et alloco doré",
-    price: "12 €",
-    category: "classics",
-    image: "/images/plats/poisson-braise-attieke-alloco.jpg",
   },
   {
     name: "Saga saga",
@@ -249,6 +254,13 @@ const menuImageSrcSet = (image: string) =>
   image.startsWith("https://images.pexels.com/")
     ? pexelsSrcSet(image, [480, 720, 960, 1200], 1.263)
     : undefined;
+
+const menuChapterLabels: Record<MenuCategory, string> = {
+  signature: "Signature de la maison",
+  classics: "Classique & braise",
+  drinks: "Jus & rituels",
+  desserts: "Douceur maison",
+};
 
 function Icon({ name, size = 20, strokeWidth = 1.6 }: { name: IconName; size?: number; strokeWidth?: number }) {
   const common = {
@@ -708,29 +720,30 @@ function App() {
           <div className="page-width">
             <Reveal className="section-heading menu-heading">
               <div>
-                <div className="eyebrow"><span className="eyebrow-line" /> La carte</div>
-                <h2>Nos spécialités<br /><em>ouest-africaines.</em></h2>
+                <div className="eyebrow"><span className="eyebrow-line" /> La carte · Sélection de la maison</div>
+                <h2>Une carte pensée<br /><em>comme un voyage.</em></h2>
               </div>
-              <div className="menu-intro"><p>Thiéb, yassa, maffé, poisson braisé, jus faits maison et desserts maison : nos spécialités ouest-africaines, généreuses comme à la maison.</p><a href="/menu.html" className="text-link" data-cursor="voir la carte">Voir la carte complète et les prix <Icon name="arrowUpRight" size={18} /></a></div>
+              <div className="menu-intro"><p>Signatures, classiques mijotés, jus en bouteille et douceurs maison : une sélection courte, composée avec le soin d’une grande table et la générosité d’une maison de famille.</p><a href="/menu.html" className="text-link" data-cursor="voir la carte">Ouvrir la carte complète <Icon name="arrowUpRight" size={18} /></a></div>
             </Reveal>
 
             <div className="menu-toolbar" role="tablist" aria-label="Filtrer la carte">
-              {[['Tous', 'Tous'], ['Signatures', 'signature'], ['Classiques', 'classics'], ['Boissons', 'drinks'], ['Desserts', 'desserts']].map(([label, value]) => (
+              {[['Sélection', 'Tous'], ['Signatures', 'signature'], ['Classiques', 'classics'], ['Jus & rituels', 'drinks'], ['Douceurs', 'desserts']].map(([label, value]) => (
                 <button key={value} className={activeFilter === value ? "is-active" : ""} onClick={() => setActiveFilter(value as typeof activeFilter)} role="tab" aria-selected={activeFilter === value}>{label}</button>
               ))}
-              <span className="menu-count">{filteredMenu.length.toString().padStart(2, "0")} propositions</span>
+              <span className="menu-count">{filteredMenu.length.toString().padStart(2, "0")} compositions</span>
             </div>
 
             <div className="menu-grid">
               {filteredMenu.map((item, index) => (
-                <motion.article className="menu-item" key={item.name} layout initial={reduceMotion ? false : { opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: reduceMotion ? 0 : index * 0.06 }} data-cursor="goûter">
+                <motion.article className={`menu-item${item.featured ? " is-featured" : ""}`} key={item.name} layout initial={reduceMotion ? false : { opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: reduceMotion ? 0 : index * 0.06 }} data-cursor="goûter">
                   <div className="menu-image-wrap">
-                    <img src={item.image} srcSet={menuImageSrcSet(item.image)} sizes="(max-width: 720px) 46vw, (max-width: 1100px) 31vw, 390px" width={item.image.startsWith("/images/") ? 800 : 1200} height={item.image.startsWith("/images/") ? 800 : 950} decoding="async" alt={`${item.name} — ${item.detail} (Diambo Resto, Paris 11e)`} loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                    <img src={item.image} srcSet={menuImageSrcSet(item.image)} sizes={item.featured ? "(max-width: 720px) 92vw, (max-width: 1100px) 64vw, 800px" : "(max-width: 720px) 46vw, (max-width: 1100px) 31vw, 390px"} width={item.image.startsWith("/images/") ? 800 : 1200} height={item.image.startsWith("/images/") ? 800 : 950} decoding="async" alt={`${item.name} — ${item.detail} (Diambo Resto, Paris 11e)`} loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                     {item.tag && <span className="menu-tag">{item.tag}</span>}
-                    <div className="menu-image-overlay"><span>Découvrir</span><Icon name="arrowUpRight" size={18} /></div>
+                    <span className="menu-item-number" aria-hidden="true">{(index + 1).toString().padStart(2, "0")}</span>
+                    <div className="menu-image-overlay"><span>{menuChapterLabels[item.category]}</span><Icon name="arrowUpRight" size={18} /></div>
                   </div>
                   <div className="menu-item-info">
-                    <div><h3>{item.name}</h3><p>{item.detail}</p></div>
+                    <div><span className="menu-item-chapter">{menuChapterLabels[item.category]}</span><h3>{item.name}</h3><p>{item.detail}</p></div>
                     <strong>{item.price}</strong>
                   </div>
                 </motion.article>
@@ -738,7 +751,7 @@ function App() {
             </div>
 
             <Reveal className="menu-footer" id="commander">
-              <p><strong>Commander en ligne :</strong> choisissez votre plateforme. Les tarifs et disponibilités peuvent évoluer.</p>
+              <p><strong>Commander en ligne :</strong> choisissez votre plateforme. Pour les boissons, la carte complète détaille les prix au comptoir, à emporter et en salle.</p>
               <div className="order-links">
                 <a href="https://www.ubereats.com/fr/store/diambo-resto/vQN5B1ZFSK6dT9vy7j52Vw" target="_blank" rel="noreferrer" data-cursor="Uber Eats">Uber Eats <Icon name="arrowUpRight" size={16} /></a>
                 <a href="https://deliveroo.fr/fr/menu/paris/11eme-nation/diambo-resto" target="_blank" rel="noreferrer" data-cursor="Deliveroo">Deliveroo <Icon name="arrowUpRight" size={16} /></a>
