@@ -29,7 +29,7 @@ type SocialLink = {
   icon: SocialKey;
 };
 
-type MenuCategory = "signature" | "classics" | "drinks";
+type MenuCategory = "signature" | "classics" | "drinks" | "desserts";
 
 type MenuItem = {
   name: string;
@@ -134,12 +134,44 @@ const menuItems: MenuItem[] = [
     image: "/images/boissons/jus-tamarin.jpg",
   },
   {
+    name: "Jus de Baobab",
+    detail: "Pain de singe fait maison, en bouteille — onctueux et naturellement acidulé",
+    price: "2,50 €",
+    category: "drinks",
+    tag: "Fait maison",
+    image: "/images/boissons/jus-baobab.jpg",
+  },
+  {
     name: "Thé Hatayé",
     detail: "Le rituel ouest-africain — trois services, à la menthe, préparé devant vous",
     price: "2,50 €",
     category: "drinks",
     tag: "Le rituel",
     image: "/images/boissons/the-hataye-menthe.jpg",
+  },
+  {
+    name: "Dégué",
+    detail: "Couscous de mil au lait caillé, servi bien frais",
+    price: "4 €",
+    category: "desserts",
+    tag: "Dessert maison",
+    image: "/images/desserts/degue-maison.jpg",
+  },
+  {
+    name: "Fondé / Moni",
+    detail: "Douceur maison au mil et au lait caillé, servie fraîche",
+    price: "4 €",
+    category: "desserts",
+    tag: "Dessert maison",
+    image: "/images/desserts/fonde-moni.jpg",
+  },
+  {
+    name: "Sombi / Sari",
+    detail: "Riz au lait maison, crémeux et délicatement parfumé",
+    price: "4 €",
+    category: "desserts",
+    tag: "Dessert maison",
+    image: "/images/desserts/sombi-sari.jpg",
   },
 ];
 
@@ -419,7 +451,7 @@ function CustomCursor() {
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeFilter, setActiveFilter] = useState<"Tous" | "signature" | "classics" | "drinks">("Tous");
+  const [activeFilter, setActiveFilter] = useState<"Tous" | "signature" | "classics" | "drinks" | "desserts">("Tous");
   const [heroTilt, setHeroTilt] = useState({ x: 0, y: 0 });
   const reduceMotion = useReducedMotion();
 
@@ -662,7 +694,7 @@ function App() {
               <div className="eyebrow"><span className="eyebrow-line" /> L'adresse</div>
               <h2>Ici, on est en <em>famille.</em></h2>
               <p>Chez Diambo, au 28 Rue Neuve des Boulets près de Nation, on ne vient pas juste manger — on vient retrouver l'ambiance d'une grande famille. On s'installe, on discute, on partage un plat, on regarde le match ensemble sur grand écran. C'est convivial, chaleureux, vivant.</p>
-              <p>Les habitués le savent : entre le thé Hatayé servi dans les règles de l'art, les jus de bissap, gingembre et tamarin faits maison en bouteille, et les plats généreux aux saveurs du Sénégal et de l'Afrique de l'Ouest, on se sent chez soi.</p>
+              <p>Les habitués le savent : entre le thé Hatayé servi dans les règles de l'art, les jus de bissap, gingembre, tamarin et baobab faits maison en bouteille, et les plats généreux aux saveurs du Sénégal et de l'Afrique de l'Ouest, on se sent chez soi.</p>
               <div className="story-signature">Bienvenue dans la famille <span>✦</span></div>
               <div className="story-actions">
                 <a className="text-link" href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer" data-cursor="itinéraire"><span>Voir l'itinéraire</span><Icon name="arrowUpRight" size={18} /></a>
@@ -679,11 +711,11 @@ function App() {
                 <div className="eyebrow"><span className="eyebrow-line" /> La carte</div>
                 <h2>Nos spécialités<br /><em>ouest-africaines.</em></h2>
               </div>
-              <div className="menu-intro"><p>Thiéb, yassa, maffé et poisson braisé : nos spécialités ouest-africaines, généreuses comme à la maison.</p><a href="/menu.html" className="text-link" data-cursor="voir la carte">Voir la carte complète et les prix <Icon name="arrowUpRight" size={18} /></a></div>
+              <div className="menu-intro"><p>Thiéb, yassa, maffé, poisson braisé, jus faits maison et desserts maison : nos spécialités ouest-africaines, généreuses comme à la maison.</p><a href="/menu.html" className="text-link" data-cursor="voir la carte">Voir la carte complète et les prix <Icon name="arrowUpRight" size={18} /></a></div>
             </Reveal>
 
             <div className="menu-toolbar" role="tablist" aria-label="Filtrer la carte">
-              {[['Tous', 'Tous'], ['Signatures', 'signature'], ['Classiques', 'classics'], ['Boissons', 'drinks']].map(([label, value]) => (
+              {[['Tous', 'Tous'], ['Signatures', 'signature'], ['Classiques', 'classics'], ['Boissons', 'drinks'], ['Desserts', 'desserts']].map(([label, value]) => (
                 <button key={value} className={activeFilter === value ? "is-active" : ""} onClick={() => setActiveFilter(value as typeof activeFilter)} role="tab" aria-selected={activeFilter === value}>{label}</button>
               ))}
               <span className="menu-count">{filteredMenu.length.toString().padStart(2, "0")} propositions</span>
@@ -760,7 +792,7 @@ function App() {
                   <div className="ambiance-card-overlay">
                     <span className="ambiance-card-icon">🍹</span>
                     <h3>Nos jus faits maison</h3>
-                    <p>Bissap, gingembre, tamarin — tous préparés ici et mis en bouteille. Des recettes authentiques, des saveurs vraies, à emporter ou à boire sur place.</p>
+                    <p>Bissap, gingembre, tamarin, baobab — tous préparés ici et mis en bouteille. Des recettes authentiques, des saveurs vraies, à emporter ou à boire sur place.</p>
                   </div>
                 </div>
               </Reveal>
@@ -852,7 +884,7 @@ function App() {
               </Reveal>
               <Reveal className="faq-item" delay={0.12}>
                 <h3>Quels plats d'Afrique de l'Ouest peut-on déguster chez Diambo Resto ?</h3>
-                <p>Des spécialités emblématiques du Sénégal et d'Afrique de l'Ouest : thiéb au poulet ou au poisson (dans l'esprit du thiéboudienne, ou ceebu jën), yassa poulet, maffé, poisson braisé avec attiéké et alloco, saga-saga et ganna — sans oublier les jus faits maison (bissap, gingembre, tamarin, baobab), les desserts au mil (sombi, fondé, dégué) et le thé Hatayé.</p>
+                <p>Des spécialités emblématiques du Sénégal et d'Afrique de l'Ouest : thiéb au poulet ou au poisson (dans l'esprit du thiéboudienne, ou ceebu jën), yassa poulet, maffé, poisson braisé avec attiéké et alloco, saga-saga et ganna — sans oublier les jus faits maison (bissap, gingembre, tamarin, baobab), les desserts maison (dégué, fondé / moni, sombi / sari) et le thé Hatayé.</p>
               </Reveal>
               <Reveal className="faq-item">
                 <h3>Quels sont les prix chez Diambo Resto ?</h3>
