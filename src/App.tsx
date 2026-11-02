@@ -60,7 +60,7 @@ const menuItems: MenuItem[] = [
     category: "signature",
     tag: "Tradition",
     image:
-      "https://images.pexels.com/photos/20067063/pexels-photo-20067063.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+      "/images/plats/thieb-poisson.jpg",
   },
   {
     name: "Poisson braisé",
@@ -69,7 +69,7 @@ const menuItems: MenuItem[] = [
     category: "signature",
     tag: "À partager",
     image:
-      "https://images.pexels.com/photos/26587855/pexels-photo-26587855.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+      "/images/plats/poisson-braise.jpg",
   },
   {
     name: "Yassa au poulet",
@@ -93,7 +93,7 @@ const menuItems: MenuItem[] = [
     price: "12 €",
     category: "classics",
     image:
-      "https://images.pexels.com/photos/34520964/pexels-photo-34520964.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+      "/images/plats/poisson-braise-attieke-alloco.jpg",
   },
   {
     name: "Saga saga",
@@ -127,7 +127,7 @@ const menuItems: MenuItem[] = [
     category: "drinks",
     tag: "Fait maison",
     image:
-      "https://images.pexels.com/photos/7655906/pexels-photo-7655906.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+      "/images/boissons/jus-gingembre.jpg",
   },
   {
     name: "Jus de Tamarin",
@@ -136,7 +136,7 @@ const menuItems: MenuItem[] = [
     category: "drinks",
     tag: "Fait maison",
     image:
-      "https://images.pexels.com/photos/13300732/pexels-photo-13300732.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+      "/images/boissons/jus-tamarin.jpg",
   },
   {
     name: "Thé Hatayé",
@@ -145,7 +145,7 @@ const menuItems: MenuItem[] = [
     category: "drinks",
     tag: "Le rituel",
     image:
-      "https://images.pexels.com/photos/37515893/pexels-photo-37515893.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+      "/images/boissons/the-maison.jpg",
   },
 ];
 
@@ -729,7 +729,7 @@ function App() {
               </Reveal>
               <Reveal className="ambiance-card" delay={0.12}>
                 <div className="ambiance-card-image ambiance-card-dark">
-                  <img src="https://images.pexels.com/photos/37515893/pexels-photo-37515893.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700" alt="Thé Hatayé servi à la menthe" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                  <img src="/images/boissons/the-maison.jpg" alt="Thé Hatayé servi à la menthe" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                   <div className="ambiance-card-overlay">
                     <span className="ambiance-card-icon">🍵</span>
                     <h3>Le rituel du Hatayé</h3>
