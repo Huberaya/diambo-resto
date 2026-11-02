@@ -59,8 +59,7 @@ const menuItems: MenuItem[] = [
     price: "10 €",
     category: "signature",
     tag: "Tradition",
-    image:
-      "https://images.pexels.com/photos/20067063/pexels-photo-20067063.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+    image: "/images/plats/thieb-poisson.jpg",
   },
   {
     name: "Poisson braisé",
@@ -68,8 +67,7 @@ const menuItems: MenuItem[] = [
     price: "10 €",
     category: "signature",
     tag: "À partager",
-    image:
-      "https://images.pexels.com/photos/26587855/pexels-photo-26587855.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+    image: "/images/plats/poisson-braise.jpg",
   },
   {
     name: "Yassa au poulet",
@@ -92,8 +90,7 @@ const menuItems: MenuItem[] = [
     detail: "Poisson grillé, semoule de manioc et alloco doré",
     price: "12 €",
     category: "classics",
-    image:
-      "https://images.pexels.com/photos/34520964/pexels-photo-34520964.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+    image: "/images/plats/poisson-braise-attieke-alloco.jpg",
   },
   {
     name: "Saga saga",
@@ -126,8 +123,7 @@ const menuItems: MenuItem[] = [
     price: "2,50 €",
     category: "drinks",
     tag: "Fait maison",
-    image:
-      "https://images.pexels.com/photos/7655906/pexels-photo-7655906.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+    image: "/images/boissons/jus-gingembre.jpg",
   },
   {
     name: "Jus de Tamarin",
@@ -135,8 +131,7 @@ const menuItems: MenuItem[] = [
     price: "2,50 €",
     category: "drinks",
     tag: "Fait maison",
-    image:
-      "https://images.pexels.com/photos/13300732/pexels-photo-13300732.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+    image: "/images/boissons/jus-tamarin.jpg",
   },
   {
     name: "Thé Hatayé",
@@ -144,8 +139,7 @@ const menuItems: MenuItem[] = [
     price: "2,50 €",
     category: "drinks",
     tag: "Le rituel",
-    image:
-      "https://images.pexels.com/photos/37515893/pexels-photo-37515893.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+    image: "/images/boissons/the-hataye-menthe.jpg",
   },
 ];
 
@@ -218,6 +212,11 @@ const pexelsSrcSet = (image: string, widths: number[], aspect: number) =>
       return `${resized} ${width}w`;
     })
     .join(", ");
+
+const menuImageSrcSet = (image: string) =>
+  image.startsWith("https://images.pexels.com/")
+    ? pexelsSrcSet(image, [480, 720, 960, 1200], 1.263)
+    : undefined;
 
 function Icon({ name, size = 20, strokeWidth = 1.6 }: { name: IconName; size?: number; strokeWidth?: number }) {
   const common = {
@@ -694,7 +693,7 @@ function App() {
               {filteredMenu.map((item, index) => (
                 <motion.article className="menu-item" key={item.name} layout initial={reduceMotion ? false : { opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: reduceMotion ? 0 : index * 0.06 }} data-cursor="goûter">
                   <div className="menu-image-wrap">
-                    <img src={item.image} srcSet={pexelsSrcSet(item.image, [480, 720, 960, 1200], 1.263)} sizes="(max-width: 720px) 46vw, (max-width: 1100px) 31vw, 390px" width={1200} height={950} decoding="async" alt={`${item.name} — ${item.detail} (Diambo Resto, Paris 11e)`} loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                    <img src={item.image} srcSet={menuImageSrcSet(item.image)} sizes="(max-width: 720px) 46vw, (max-width: 1100px) 31vw, 390px" width={item.image.startsWith("/images/") ? 800 : 1200} height={item.image.startsWith("/images/") ? 800 : 950} decoding="async" alt={`${item.name} — ${item.detail} (Diambo Resto, Paris 11e)`} loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                     {item.tag && <span className="menu-tag">{item.tag}</span>}
                     <div className="menu-image-overlay"><span>Découvrir</span><Icon name="arrowUpRight" size={18} /></div>
                   </div>

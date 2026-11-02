@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.diambo-resto.fr/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://www.diambo-resto.fr/menu.html</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -54,6 +54,21 @@
       <image:geo_location>Paris, France</image:geo_location>
     </image:image>
     <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/thieb-poisson.jpg</image:loc>
+      <image:title>Thiéb au poisson (thiéboudienne) — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/poisson-braise.jpg</image:loc>
+      <image:title>Poisson braisé entier grillé — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/poisson-braise-attieke-alloco.jpg</image:loc>
+      <image:title>Poisson braisé, attiéké et alloco — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
       <image:loc>https://www.diambo-resto.fr/images/desserts/sombi.jpg</image:loc>
       <image:title>Sombi, dessert maison au mil — Diambo Resto, Paris 11e</image:title>
       <image:geo_location>Paris, France</image:geo_location>
@@ -69,13 +84,23 @@
       <image:geo_location>Paris, France</image:geo_location>
     </image:image>
     <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/boissons/jus-gingembre.jpg</image:loc>
+      <image:title>Jus de gingembre frais fait maison — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/boissons/jus-tamarin.jpg</image:loc>
+      <image:title>Jus de tamarin glacé fait maison — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
       <image:loc>https://www.diambo-resto.fr/images/boissons/baobab.jpg</image:loc>
       <image:title>Jus de baobab (pain de singe) fait maison — Diambo Resto, Paris 11e</image:title>
       <image:geo_location>Paris, France</image:geo_location>
     </image:image>
     <image:image>
-      <image:loc>https://www.diambo-resto.fr/images/boissons/the-hataye.jpg</image:loc>
-      <image:title>Thé Hatayé, le rituel du thé ouest-africain — Diambo Resto, Paris 11e</image:title>
+      <image:loc>https://www.diambo-resto.fr/images/boissons/the-hataye-menthe.jpg</image:loc>
+      <image:title>Thé Hatayé mousseux à la menthe — Diambo Resto, Paris 11e</image:title>
       <image:geo_location>Paris, France</image:geo_location>
     </image:image>
     <image:image>
