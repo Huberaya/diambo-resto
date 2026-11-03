@@ -946,7 +946,7 @@ function App() {
       <footer className="site-footer">
         <div className="page-width footer-top">
           <div className="footer-brand">
-            <a href="#accueil" className="footer-logo" aria-label="Diambo Resto, retour à l'accueil"><img src="/logo.jpg" alt="Logo Diambo Resto — Saveurs de l'Afrique de l'Ouest, restaurant africain à Paris 11e" width={1000} height={972} loading="lazy" /></a>
+            <a href="#accueil" className="footer-logo" aria-label="Diambo Resto, retour à l'accueil"><img src="/logo.jpg" alt="Logo Diambo Resto — Saveurs de l'Afrique de l'Ouest, restaurant africain à Paris 11e" width={1000} height={971} loading="lazy" /></a>
             <p>Les saveurs de l'Afrique de l'Ouest<br />à Paris 11e, près de Nation.</p>
             <div className="footer-social">
               <small>Suivez-nous</small>
