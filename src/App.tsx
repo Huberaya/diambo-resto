@@ -389,8 +389,8 @@ function Logo({ light = false }: { light?: boolean }) {
     <a href="#accueil" className={`brand ${light ? "brand-light" : ""}`} aria-label="Diambo Resto, accueil">
       <img className="brand-mark" src="/logo-mark.jpg" alt="" width={42} height={42} />
       <span className="brand-copy">
-        <strong>DIAMBO</strong>
-        <small>RESTO</small>
+        <strong>DIAMBO RESTO</strong>
+        <small>PARIS 11E</small>
       </span>
     </a>
   );
@@ -663,7 +663,7 @@ function App() {
               <span className="steam steam-one" />
               <span className="steam steam-two" />
               <span className="steam steam-three" />
-              <div className="object-caption"><span>DIAMBO</span><i /> <span>PARIS 11</span></div>
+              <div className="object-caption"><span>DIAMBO RESTO</span><i /> <span>PARIS 11</span></div>
             </motion.div>
           </div>
 
@@ -705,7 +705,7 @@ function App() {
             <Reveal className="story-copy" delay={0.1}>
               <div className="eyebrow"><span className="eyebrow-line" /> L'adresse</div>
               <h2>Ici, on est en <em>famille.</em></h2>
-              <p>Chez Diambo, au 28 Rue Neuve des Boulets près de Nation, on ne vient pas juste manger — on vient retrouver l'ambiance d'une grande famille. On s'installe, on discute, on partage un plat, on regarde le match ensemble sur grand écran. C'est convivial, chaleureux, vivant.</p>
+              <p>Chez Diambo Resto, au 28 Rue Neuve des Boulets près de Nation, on ne vient pas juste manger — on vient retrouver l'ambiance d'une grande famille. On s'installe, on discute, on partage un plat, on regarde le match ensemble sur grand écran. C'est convivial, chaleureux, vivant.</p>
               <p>Les habitués le savent : entre le thé Hatayé servi dans les règles de l'art, les jus de bissap, gingembre, tamarin et baobab faits maison en bouteille, et les plats généreux aux saveurs du Sénégal et de l'Afrique de l'Ouest, on se sent chez soi.</p>
               <div className="story-signature">Bienvenue dans la famille <span>✦</span></div>
               <div className="story-actions">
@@ -846,7 +846,7 @@ function App() {
           <div className="page-width">
             <Reveal className="social-header">
               <div className="eyebrow"><span className="eyebrow-line" /> Réseaux sociaux</div>
-              <h2>La famille Diambo,<br /><em>partout avec vous.</em></h2>
+              <h2>La famille Diambo Resto,<br /><em>partout avec vous.</em></h2>
               <p>Plats du jour, coulisses, matchs et bons moments — suivez toute l'actualité du restaurant sur nos réseaux.</p>
             </Reveal>
             <div className="social-grid">
