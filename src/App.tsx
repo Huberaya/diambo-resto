@@ -29,7 +29,7 @@ type SocialLink = {
   icon: SocialKey;
 };
 
-type MenuCategory = "signature" | "classics" | "drinks";
+type MenuCategory = "signature" | "classics" | "drinks" | "desserts";
 
 type MenuItem = {
   name: string;
@@ -38,12 +38,22 @@ type MenuItem = {
   category: MenuCategory;
   image: string;
   tag?: string;
+  featured?: boolean;
 };
 
 const fallbackImage =
   "https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1200&q=85";
 
 const menuItems: MenuItem[] = [
+  {
+    name: "Thiéb au poisson",
+    detail: "Dans l'esprit du thiéboudienne — riz au poisson en sauce tomate, légumes fondants",
+    price: "10 €",
+    category: "signature",
+    tag: "Plat national",
+    featured: true,
+    image: "/images/plats/thieb-poisson.jpg",
+  },
   {
     name: "Thiéb au poulet",
     detail: "Riz parfumé au poulet, légumes de saison mijotés",
@@ -54,13 +64,12 @@ const menuItems: MenuItem[] = [
       "https://images.pexels.com/photos/33434014/pexels-photo-33434014.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
   },
   {
-    name: "Thiéb au poisson",
-    detail: "Le plat national — riz au poisson en sauce tomate, légumes fondants",
-    price: "10 €",
+    name: "Poisson braisé + attiéké + alloco",
+    detail: "Poisson grillé, semoule de manioc et alloco doré",
+    price: "12 €",
     category: "signature",
-    tag: "Tradition",
-    image:
-      "/images/plats/thieb-poisson.jpg",
+    tag: "Signature généreuse",
+    image: "/images/plats/poisson-braise-attieke-alloco.jpg",
   },
   {
     name: "Poisson braisé",
@@ -68,14 +77,14 @@ const menuItems: MenuItem[] = [
     price: "10 €",
     category: "signature",
     tag: "À partager",
-    image:
-      "/images/plats/poisson-braise.jpg",
+    image: "/images/plats/poisson-braise.jpg",
   },
   {
     name: "Yassa au poulet",
     detail: "Poulet rôti, oignons confits au citron et moutarde douce",
     price: "9 €",
     category: "signature",
+    tag: "Mijoté signature",
     image:
       "https://images.pexels.com/photos/17696671/pexels-photo-17696671.jpeg?auto=compress&cs=tinysrgb&dpr=2&fit=crop&w=1200&h=950",
   },
@@ -83,17 +92,10 @@ const menuItems: MenuItem[] = [
     name: "Maffé",
     detail: "Sauce onctueuse à l'arachide, riz blanc et légumes",
     price: "9 €",
-    category: "classics",
+    category: "signature",
+    tag: "Sauce veloutée",
     image:
       "https://images.pexels.com/photos/998244/pexels-photo-998244.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
-  },
-  {
-    name: "Poisson braisé + attiéké + alloco",
-    detail: "Poisson grillé, semoule de manioc et alloco doré",
-    price: "12 €",
-    category: "classics",
-    image:
-      "/images/plats/poisson-braise-attieke-alloco.jpg",
   },
   {
     name: "Saga saga",
@@ -126,8 +128,7 @@ const menuItems: MenuItem[] = [
     price: "2,50 €",
     category: "drinks",
     tag: "Fait maison",
-    image:
-      "/images/boissons/jus-gingembre.jpg",
+    image: "/images/boissons/jus-gingembre.jpg",
   },
   {
     name: "Jus de Tamarin",
@@ -135,8 +136,15 @@ const menuItems: MenuItem[] = [
     price: "2,50 €",
     category: "drinks",
     tag: "Fait maison",
-    image:
-      "/images/boissons/jus-tamarin.jpg",
+    image: "/images/boissons/jus-tamarin.jpg",
+  },
+  {
+    name: "Jus de Baobab",
+    detail: "Pain de singe fait maison, en bouteille — onctueux et naturellement acidulé",
+    price: "2,50 €",
+    category: "drinks",
+    tag: "Fait maison",
+    image: "/images/boissons/jus-baobab.jpg",
   },
   {
     name: "Thé Hatayé",
@@ -144,8 +152,31 @@ const menuItems: MenuItem[] = [
     price: "2,50 €",
     category: "drinks",
     tag: "Le rituel",
-    image:
-      "/images/boissons/the-maison.jpg",
+    image: "/images/boissons/the-hataye-menthe.jpg",
+  },
+  {
+    name: "Dégué",
+    detail: "Couscous de mil au lait caillé, servi bien frais",
+    price: "4 €",
+    category: "desserts",
+    tag: "Dessert maison",
+    image: "/images/desserts/degue-maison.jpg",
+  },
+  {
+    name: "Fondé / Moni",
+    detail: "Douceur maison au mil et au lait caillé, servie fraîche",
+    price: "4 €",
+    category: "desserts",
+    tag: "Dessert maison",
+    image: "/images/desserts/fonde-moni.jpg",
+  },
+  {
+    name: "Sombi / Sari",
+    detail: "Riz au lait maison, crémeux et délicatement parfumé",
+    price: "4 €",
+    category: "desserts",
+    tag: "Dessert maison",
+    image: "/images/desserts/sombi-sari.jpg",
   },
 ];
 
@@ -174,7 +205,7 @@ const reviews = [
 ];
 
 const heroImage =
-  "https://images.pexels.com/photos/20067063/pexels-photo-20067063.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=2200&h=1450";
+  "https://images.pexels.com/photos/20067063/pexels-photo-20067063.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=1055";
 
 const socialLinks: SocialLink[] = [
   {
@@ -208,6 +239,28 @@ const atmosphereImage =
 
 const interiorImage =
   "https://images.pexels.com/photos/36127951/pexels-photo-36127951.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1800&h=1250";
+
+const pexelsSrcSet = (image: string, widths: number[], aspect: number) =>
+  widths
+    .map((width) => {
+      const resized = image
+        .replace(/([?&])dpr=\d+&/, "$1")
+        .replace(/w=\d+&h=\d+/, `w=${width}&h=${Math.round(width / aspect)}`);
+      return `${resized} ${width}w`;
+    })
+    .join(", ");
+
+const menuImageSrcSet = (image: string) =>
+  image.startsWith("https://images.pexels.com/")
+    ? pexelsSrcSet(image, [480, 720, 960, 1200], 1.263)
+    : undefined;
+
+const menuChapterLabels: Record<MenuCategory, string> = {
+  signature: "Signature de la maison",
+  classics: "Classique & braise",
+  drinks: "Jus & rituels",
+  desserts: "Douceur maison",
+};
 
 function Icon({ name, size = 20, strokeWidth = 1.6 }: { name: IconName; size?: number; strokeWidth?: number }) {
   const common = {
@@ -334,19 +387,20 @@ function Icon({ name, size = 20, strokeWidth = 1.6 }: { name: IconName; size?: n
 function Logo({ light = false }: { light?: boolean }) {
   return (
     <a href="#accueil" className={`brand ${light ? "brand-light" : ""}`} aria-label="Diambo Resto, accueil">
-      <span className="brand-mark">D</span>
+      <img className="brand-mark" src="/logo-mark.jpg" alt="" width={42} height={42} />
       <span className="brand-copy">
-        <strong>DIAMBO</strong>
-        <small>RESTO</small>
+        <strong>DIAMBO RESTO</strong>
+        <small>PARIS 11E</small>
       </span>
     </a>
   );
 }
 
-function Reveal({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
+function Reveal({ children, className = "", delay = 0, id }: { children: React.ReactNode; className?: string; delay?: number; id?: string }) {
   const reduceMotion = useReducedMotion();
   return (
     <motion.div
+      id={id}
       className={className}
       initial={reduceMotion ? false : { opacity: 0, y: 28 }}
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
@@ -409,7 +463,7 @@ function CustomCursor() {
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [activeFilter, setActiveFilter] = useState<"Tous" | "signature" | "classics" | "drinks">("Tous");
+  const [activeFilter, setActiveFilter] = useState<"Tous" | "signature" | "classics" | "drinks" | "desserts">("Tous");
   const [heroTilt, setHeroTilt] = useState({ x: 0, y: 0 });
   const reduceMotion = useReducedMotion();
 
@@ -459,6 +513,12 @@ function App() {
     document.getElementById(id)?.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
   };
 
+  const handleAnchorClick = (event: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    event.preventDefault();
+    scrollTo(id);
+    window.history.pushState(null, "", `#${id}`);
+  };
+
   const handleHeroPointer = (event: React.PointerEvent<HTMLDivElement>) => {
     if (reduceMotion || event.pointerType !== "mouse") return;
     const rect = event.currentTarget.getBoundingClientRect();
@@ -478,11 +538,11 @@ function App() {
           <Logo light={!scrolled} />
 
           <nav className="desktop-nav" aria-label="Navigation principale">
-            <button onClick={() => scrollTo("accueil")} data-cursor="accueil">Accueil</button>
-            <button onClick={() => scrollTo("carte")} data-cursor="menu">La carte</button>
-            <button onClick={() => scrollTo("ambiance")} data-cursor="ambiance">L'ambiance</button>
-            <button onClick={() => scrollTo("adresse")} data-cursor="adresse">L'adresse</button>
-            <button onClick={() => scrollTo("contact")} data-cursor="contact">Contact</button>
+            <a href="#accueil" onClick={(event) => handleAnchorClick(event, "accueil")} data-cursor="accueil">Accueil</a>
+            <a href="#carte" onClick={(event) => handleAnchorClick(event, "carte")} data-cursor="menu">La carte</a>
+            <a href="#ambiance" onClick={(event) => handleAnchorClick(event, "ambiance")} data-cursor="ambiance">L'ambiance</a>
+            <a href="#adresse" onClick={(event) => handleAnchorClick(event, "adresse")} data-cursor="adresse">L'adresse</a>
+            <a href="#contact" onClick={(event) => handleAnchorClick(event, "contact")} data-cursor="contact">Contact</a>
           </nav>
 
           <div className="nav-actions">
@@ -518,9 +578,10 @@ function App() {
                   ["L'adresse", "adresse"],
                   ["Contact", "contact"],
                 ].map(([label, id], index) => (
-                  <motion.button
+                  <motion.a
                     key={id}
-                    onClick={() => scrollTo(id)}
+                    href={`#${id}`}
+                    onClick={(event) => handleAnchorClick(event, id)}
                     initial={{ opacity: 0, x: 35 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.08 + index * 0.06 }}
@@ -528,7 +589,7 @@ function App() {
                     <span>0{index + 1}</span>
                     {label}
                     <Icon name="arrowUpRight" size={20} />
-                  </motion.button>
+                  </motion.a>
                 ))}
               </nav>
               <div className="mobile-menu-bottom">
@@ -566,19 +627,19 @@ function App() {
               animate={reduceMotion ? undefined : { opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             >
-              <div className="eyebrow light-eyebrow"><span className="eyebrow-line" /> Paris 11e <span className="eyebrow-dot" /> Rue Neuve des Boulets</div>
+              <div className="eyebrow light-eyebrow"><span className="eyebrow-line" /> Paris 11e <span className="eyebrow-dot" /> Nation <span className="eyebrow-dot" /> Rue Neuve des Boulets</div>
               <h1>
-                <span className="hero-title-small">Les saveurs de</span>
+                <span className="hero-title-small">Diambo Resto — saveurs de</span>
                 <span className="hero-title-main">l'Afrique</span>
                 <span className="hero-title-script">de l'Ouest</span>
               </h1>
-              <p className="hero-lead">Une table généreuse, authentique et vivante au coeur du 11e.</p>
+              <p className="hero-lead">Cuisine d'Afrique de l'Ouest à Paris 11e, près de Nation — généreuse, authentique et vivante.</p>
               <div className="hero-actions">
-                <button className="button button-primary" onClick={() => scrollTo("carte")} data-cursor="découvrir">
+                <a className="button button-primary" href="#carte" onClick={(event) => handleAnchorClick(event, "carte")} data-cursor="découvrir">
                   <span>Découvrir la carte</span><Icon name="arrow" size={18} />
-                </button>
-                <a className="button button-ghost" href="https://diambo-resto.fr" target="_blank" rel="noreferrer" data-cursor="commander">
-                  Commander en ligne <Icon name="arrowUpRight" size={18} />
+                </a>
+                <a className="button button-ghost" href="#commander" onClick={(event) => handleAnchorClick(event, "commander")} data-cursor="commander">
+                  Commander en ligne <Icon name="arrow" size={18} />
                 </a>
               </div>
               <div className="hero-note"><span className="hero-note-stars">★★★★★</span> 4,4/5 sur Google <span className="hero-note-separator" /> 116 avis</div>
@@ -602,14 +663,14 @@ function App() {
               <span className="steam steam-one" />
               <span className="steam steam-two" />
               <span className="steam steam-three" />
-              <div className="object-caption"><span>DIAMBO</span><i /> <span>PARIS 11</span></div>
+              <div className="object-caption"><span>DIAMBO RESTO</span><i /> <span>PARIS 11</span></div>
             </motion.div>
           </div>
 
           <div className="hero-bottom page-width">
             <div className="hero-location"><Icon name="pin" size={16} /> 28 Rue Neuve des Boulets, 75011 Paris</div>
-            <button className="scroll-cue" onClick={() => scrollTo("adresse")} data-cursor="explorer"><span>Scroll pour explorer</span><span className="scroll-line" /></button>
-            <div className="hero-status"><span className="status-pulse" /> Ouvert aujourd'hui <span>•</span> jusqu'à 02:00</div>
+            <a className="scroll-cue" href="#adresse" onClick={(event) => handleAnchorClick(event, "adresse")} data-cursor="explorer"><span>Scroll pour explorer</span><span className="scroll-line" /></a>
+            <div className="hero-status"><span className="status-pulse" /> Tous les jours <span>•</span> 08:00 — 02:00</div>
           </div>
         </section>
 
@@ -634,7 +695,7 @@ function App() {
           <div className="page-width story-grid">
             <Reveal className="story-visual">
               <div className="visual-frame">
-                <img src={atmosphereImage} alt="Plat généreux de riz épicé et de poulet servi à table" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                <img src={atmosphereImage} srcSet={pexelsSrcSet(atmosphereImage, [640, 960, 1400, 1800], 1.44)} sizes="(max-width: 720px) 92vw, (max-width: 1100px) 44vw, 560px" width={1800} height={1250} decoding="async" alt="Plat généreux de riz épicé et de poulet servi à table chez Diambo Resto, Paris 11e" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                 <div className="visual-stamp"><span>01</span><span>FAMILLE</span></div>
                 <div className="visual-caption">Comme à la maison</div>
               </div>
@@ -644,12 +705,12 @@ function App() {
             <Reveal className="story-copy" delay={0.1}>
               <div className="eyebrow"><span className="eyebrow-line" /> L'adresse</div>
               <h2>Ici, on est en <em>famille.</em></h2>
-              <p>Chez Diambo, on ne vient pas juste manger — on vient retrouver l'ambiance d'une grande famille. On s'installe, on discute, on partage un plat, on regarde le match ensemble sur grand écran. C'est convivial, chaleureux, vivant.</p>
-              <p>Les habitués le savent : entre le thé Hatayé servi dans les règles de l'art, les jus de bissap, gingembre et tamarin faits maison en bouteille, et les plats généreux qui sentent bon l'Afrique de l'Ouest, on se sent chez soi.</p>
+              <p>Chez Diambo Resto, au 28 Rue Neuve des Boulets près de Nation, on ne vient pas juste manger — on vient retrouver l'ambiance d'une grande famille. On s'installe, on discute, on partage un plat, on regarde le match ensemble sur grand écran. C'est convivial, chaleureux, vivant.</p>
+              <p>Les habitués le savent : entre le thé Hatayé servi dans les règles de l'art, les jus de bissap, gingembre, tamarin et baobab faits maison en bouteille, et les plats généreux aux saveurs du Sénégal et de l'Afrique de l'Ouest, on se sent chez soi.</p>
               <div className="story-signature">Bienvenue dans la famille <span>✦</span></div>
               <div className="story-actions">
                 <a className="text-link" href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer" data-cursor="itinéraire"><span>Voir l'itinéraire</span><Icon name="arrowUpRight" size={18} /></a>
-                <span className="story-address"><Icon name="pin" size={16} /> 28 Rue Neuve des Boulets</span>
+                <span className="story-address"><Icon name="pin" size={16} /> 28 Rue Neuve des Boulets, Paris 11e</span>
               </div>
             </Reveal>
           </div>
@@ -659,37 +720,38 @@ function App() {
           <div className="page-width">
             <Reveal className="section-heading menu-heading">
               <div>
-                <div className="eyebrow"><span className="eyebrow-line" /> La carte</div>
-                <h2>Les incontournables<br /><em>de la maison.</em></h2>
+                <div className="eyebrow"><span className="eyebrow-line" /> La carte · Sélection de la maison</div>
+                <h2>Une carte pensée<br /><em>comme un voyage.</em></h2>
               </div>
-              <div className="menu-intro"><p>Une sélection de spécialités ouest-africaines, choisies pour leur caractère et leur générosité.</p><a href="https://diambo-resto.fr" target="_blank" rel="noreferrer" className="text-link" data-cursor="voir la carte">Carte complète <Icon name="arrowUpRight" size={18} /></a></div>
+              <div className="menu-intro"><p>Signatures, classiques mijotés, jus en bouteille et douceurs maison : une sélection courte, composée avec le soin d’une grande table et la générosité d’une maison de famille.</p><a href="/menu.html" className="text-link" data-cursor="voir la carte">Ouvrir la carte complète <Icon name="arrowUpRight" size={18} /></a></div>
             </Reveal>
 
             <div className="menu-toolbar" role="tablist" aria-label="Filtrer la carte">
-              {[['Tous', 'Tous'], ['Signatures', 'signature'], ['Classiques', 'classics'], ['Boissons', 'drinks']].map(([label, value]) => (
+              {[['Sélection', 'Tous'], ['Signatures', 'signature'], ['Classiques', 'classics'], ['Jus & rituels', 'drinks'], ['Douceurs', 'desserts']].map(([label, value]) => (
                 <button key={value} className={activeFilter === value ? "is-active" : ""} onClick={() => setActiveFilter(value as typeof activeFilter)} role="tab" aria-selected={activeFilter === value}>{label}</button>
               ))}
-              <span className="menu-count">{filteredMenu.length.toString().padStart(2, "0")} propositions</span>
+              <span className="menu-count">{filteredMenu.length.toString().padStart(2, "0")} compositions</span>
             </div>
 
             <div className="menu-grid">
               {filteredMenu.map((item, index) => (
-                <motion.article className="menu-item" key={item.name} layout initial={reduceMotion ? false : { opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: reduceMotion ? 0 : index * 0.06 }} data-cursor="goûter">
+                <motion.article className={`menu-item${item.featured ? " is-featured" : ""}`} key={item.name} layout initial={reduceMotion ? false : { opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: reduceMotion ? 0 : index * 0.06 }} data-cursor="goûter">
                   <div className="menu-image-wrap">
-                    <img src={item.image} alt={item.name} loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                    <img src={item.image} srcSet={menuImageSrcSet(item.image)} sizes={item.featured ? "(max-width: 720px) 92vw, (max-width: 1100px) 64vw, 800px" : "(max-width: 720px) 46vw, (max-width: 1100px) 31vw, 390px"} width={item.image.startsWith("/images/") ? 800 : 1200} height={item.image.startsWith("/images/") ? 800 : 950} decoding="async" alt={`${item.name} — ${item.detail} (Diambo Resto, Paris 11e)`} loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                     {item.tag && <span className="menu-tag">{item.tag}</span>}
-                    <div className="menu-image-overlay"><span>Découvrir</span><Icon name="arrowUpRight" size={18} /></div>
+                    <span className="menu-item-number" aria-hidden="true">{(index + 1).toString().padStart(2, "0")}</span>
+                    <div className="menu-image-overlay"><span>{menuChapterLabels[item.category]}</span><Icon name="arrowUpRight" size={18} /></div>
                   </div>
                   <div className="menu-item-info">
-                    <div><h3>{item.name}</h3><p>{item.detail}</p></div>
+                    <div><span className="menu-item-chapter">{menuChapterLabels[item.category]}</span><h3>{item.name}</h3><p>{item.detail}</p></div>
                     <strong>{item.price}</strong>
                   </div>
                 </motion.article>
               ))}
             </div>
 
-            <Reveal className="menu-footer">
-              <p>Les tarifs et disponibilités peuvent évoluer. Consultez la carte actuelle sur notre site ou les plateformes de commande.</p>
+            <Reveal className="menu-footer" id="commander">
+              <p><strong>Commander en ligne :</strong> choisissez votre plateforme. Pour les boissons, la carte complète détaille les prix au comptoir, à emporter et en salle.</p>
               <div className="order-links">
                 <a href="https://www.ubereats.com/fr/store/diambo-resto/vQN5B1ZFSK6dT9vy7j52Vw" target="_blank" rel="noreferrer" data-cursor="Uber Eats">Uber Eats <Icon name="arrowUpRight" size={16} /></a>
                 <a href="https://deliveroo.fr/fr/menu/paris/11eme-nation/diambo-resto" target="_blank" rel="noreferrer" data-cursor="Deliveroo">Deliveroo <Icon name="arrowUpRight" size={16} /></a>
@@ -719,7 +781,7 @@ function App() {
             <div className="ambiance-grid">
               <Reveal className="ambiance-card ambiance-card-large" delay={0.05}>
                 <div className="ambiance-card-image">
-                  <img src={sportsImage} alt="Ambiance conviviale pour regarder les matchs de football" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                  <img src={sportsImage} srcSet={pexelsSrcSet(sportsImage, [640, 960, 1400, 1800], 1.44)} sizes="(max-width: 720px) 92vw, (max-width: 1100px) 58vw, 760px" width={1800} height={1250} decoding="async" alt="Ambiance conviviale pour regarder les matchs de football chez Diambo Resto, Paris 11e" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                   <div className="ambiance-card-overlay">
                     <span className="ambiance-card-icon">⚽</span>
                     <h3>Les matchs sur grand écran</h3>
@@ -729,7 +791,7 @@ function App() {
               </Reveal>
               <Reveal className="ambiance-card" delay={0.12}>
                 <div className="ambiance-card-image ambiance-card-dark">
-                  <img src="/images/boissons/the-maison.jpg" alt="Thé Hatayé servi à la menthe" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                  <img src="https://images.pexels.com/photos/37515893/pexels-photo-37515893.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700" srcSet={pexelsSrcSet("https://images.pexels.com/photos/37515893/pexels-photo-37515893.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700", [480, 720, 900], 1.286)} sizes="(max-width: 720px) 92vw, (max-width: 1100px) 42vw, 540px" width={900} height={700} decoding="async" alt="Thé Hatayé servi à la menthe chez Diambo Resto, Paris 11e" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                   <div className="ambiance-card-overlay">
                     <span className="ambiance-card-icon">🍵</span>
                     <h3>Le rituel du Hatayé</h3>
@@ -739,11 +801,11 @@ function App() {
               </Reveal>
               <Reveal className="ambiance-card" delay={0.18}>
                 <div className="ambiance-card-image ambiance-card-dark">
-                  <img src="https://images.pexels.com/photos/34467117/pexels-photo-34467117.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700" alt="Jus de bissap fait maison en bouteille" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                  <img src="https://images.pexels.com/photos/34467117/pexels-photo-34467117.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700" srcSet={pexelsSrcSet("https://images.pexels.com/photos/34467117/pexels-photo-34467117.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700", [480, 720, 900], 1.286)} sizes="(max-width: 720px) 92vw, (max-width: 1100px) 42vw, 540px" width={900} height={700} decoding="async" alt="Jus de bissap fait maison en bouteille chez Diambo Resto, Paris 11e" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                   <div className="ambiance-card-overlay">
                     <span className="ambiance-card-icon">🍹</span>
                     <h3>Nos jus faits maison</h3>
-                    <p>Bissap, gingembre, tamarin — tous préparés ici et mis en bouteille. Des recettes authentiques, des saveurs vraies, à emporter ou à boire sur place.</p>
+                    <p>Bissap, gingembre, tamarin, baobab — tous préparés ici et mis en bouteille. Des recettes authentiques, des saveurs vraies, à emporter ou à boire sur place.</p>
                   </div>
                 </div>
               </Reveal>
@@ -776,7 +838,7 @@ function App() {
                 </Reveal>
               ))}
             </div>
-            <Reveal className="reviews-cta"><a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer" className="text-link" data-cursor="avis"><span>Voir les 116 avis Google</span><Icon name="arrowUpRight" size={18} /></a></Reveal>
+            <Reveal className="reviews-cta"><a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer" className="text-link" data-cursor="avis"><span>Voir les 116 avis Google</span><Icon name="arrowUpRight" size={18} /></a><a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer" className="text-link" data-cursor="avis"><span>Laisser un avis Google</span><Icon name="arrowUpRight" size={18} /></a></Reveal>
           </div>
         </section>
 
@@ -784,7 +846,7 @@ function App() {
           <div className="page-width">
             <Reveal className="social-header">
               <div className="eyebrow"><span className="eyebrow-line" /> Réseaux sociaux</div>
-              <h2>La famille Diambo,<br /><em>partout avec vous.</em></h2>
+              <h2>La famille Diambo Resto,<br /><em>partout avec vous.</em></h2>
               <p>Plats du jour, coulisses, matchs et bons moments — suivez toute l'actualité du restaurant sur nos réseaux.</p>
             </Reveal>
             <div className="social-grid">
@@ -802,11 +864,11 @@ function App() {
               ))}
             </div>
             <Reveal className="social-web" delay={0.26}>
-              <a className="social-web-card" href="https://diambo-resto.fr" target="_blank" rel="noreferrer" data-cursor="commander">
-                <span className="social-card-icon"><Icon name="globe" size={22} /></span>
+              <a className="social-web-card" href="#commander" data-cursor="commander">
+                <span className="social-card-icon"><Icon name="utensils" size={22} /></span>
                 <span className="social-web-copy">
-                  <strong>Site internet</strong>
-                  <small>diambo-resto.fr — carte complète & commande en ligne</small>
+                  <strong>Commander en ligne</strong>
+                  <small>Uber Eats ou Deliveroo — choisissez votre plateforme</small>
                 </span>
                 <Icon name="arrowUpRight" size={18} />
               </a>
@@ -817,12 +879,48 @@ function App() {
           </div>
         </section>
 
+        <section id="faq" className="faq-section section-ivory">
+          <div className="page-width">
+            <Reveal className="faq-header">
+              <div className="eyebrow"><span className="eyebrow-line" /> Questions fréquentes</div>
+              <h2>Avant de venir,<br /><em>on vous dit tout.</em></h2>
+              <p>Adresse, horaires, plats signatures, prix et livraison : les réponses aux questions que l'on nous pose le plus souvent.</p>
+            </Reveal>
+            <div className="faq-grid">
+              <Reveal className="faq-item">
+                <h3>Où se trouve Diambo Resto à Paris 11e ?</h3>
+                <p>Diambo Resto est situé au 28 Rue Neuve des Boulets, 75011 Paris, à deux pas de la station Rue des Boulets (métro ligne 9) et à quelques minutes à pied de la place de la Nation (lignes 1, 2, 6, 9 et RER A).</p>
+              </Reveal>
+              <Reveal className="faq-item" delay={0.06}>
+                <h3>Quels sont les horaires d'ouverture de Diambo Resto ?</h3>
+                <p>Le restaurant est ouvert tous les jours de 08:00 à 02:00, du petit matin jusqu'au bout de la nuit.</p>
+              </Reveal>
+              <Reveal className="faq-item" delay={0.12}>
+                <h3>Quels plats d'Afrique de l'Ouest peut-on déguster chez Diambo Resto ?</h3>
+                <p>Des spécialités emblématiques du Sénégal et d'Afrique de l'Ouest : thiéb au poulet ou au poisson (dans l'esprit du thiéboudienne, ou ceebu jën), yassa poulet, maffé, poisson braisé avec attiéké et alloco, saga-saga et ganna — sans oublier les jus faits maison (bissap, gingembre, tamarin, baobab), les desserts maison (dégué, fondé / moni, sombi / sari) et le thé Hatayé.</p>
+              </Reveal>
+              <Reveal className="faq-item">
+                <h3>Quels sont les prix chez Diambo Resto ?</h3>
+                <p>Les plats sont entre 9 € et 12 €, les entrées dès 3 € et les jus maison dès 1,50 €. Retrouvez la <a href="/menu.html">carte complète avec les prix</a> en ligne.</p>
+              </Reveal>
+              <Reveal className="faq-item" delay={0.06}>
+                <h3>Peut-on commander à emporter ou en livraison ?</h3>
+                <p>Oui : sur place, à emporter en appelant le <a href="tel:+33980726675">09 80 72 66 75</a>, et en livraison via Uber Eats et Deliveroo.</p>
+              </Reveal>
+              <Reveal className="faq-item" delay={0.12}>
+                <h3>Peut-on regarder les matchs chez Diambo Resto ?</h3>
+                <p>Oui, les matchs sont diffusés sur grand écran, dans une ambiance conviviale et familiale.</p>
+              </Reveal>
+            </div>
+          </div>
+        </section>
+
         <section id="contact" className="contact-section section-terracotta">
           <div className="page-width contact-grid">
             <Reveal className="contact-copy">
               <div className="eyebrow light-eyebrow"><span className="eyebrow-line" /> Venir chez nous</div>
               <h2>Le meilleur moyen de nous trouver ? <em>Venir.</em></h2>
-              <p>Une adresse simple à retenir, au coeur du 11e. Prenez place, emportez votre plat ou faites-vous livrer.</p>
+              <p>Au 28 Rue Neuve des Boulets, à deux pas de la station Rue des Boulets (ligne 9) et à quelques minutes de Nation (lignes 1, 2, 6, 9 — RER A). Prenez place, emportez votre plat ou faites-vous livrer.</p>
               <div className="contact-actions"><a className="button button-cream" href="tel:+33980726675"><Icon name="call" size={18} /> Appeler</a><a className="button button-outline-light" href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer"><Icon name="compass" size={18} /> Itinéraire</a></div>
               <div className="contact-social">
                 <small>Suivez-nous</small>
@@ -836,10 +934,10 @@ function App() {
               </div>
             </Reveal>
             <Reveal className="contact-details" delay={0.12}>
-              <div className="contact-detail"><span className="contact-icon"><Icon name="pin" size={20} /></span><div><small>Adresse</small><strong>28 Rue Neuve des Boulets<br />75011 Paris</strong></div></div>
+              <div className="contact-detail"><span className="contact-icon"><Icon name="pin" size={20} /></span><div><small>Adresse</small><address><strong>28 Rue Neuve des Boulets<br />75011 Paris</strong></address></div></div>
               <div className="contact-detail"><span className="contact-icon"><Icon name="call" size={20} /></span><div><small>Téléphone</small><strong>09 80 72 66 75</strong></div></div>
               <div className="contact-detail"><span className="contact-icon"><Icon name="utensils" size={20} /></span><div><small>Services</small><strong>Sur place · À emporter<br />Livraison · Sport à l'écran</strong></div></div>
-              <div className="contact-hours"><span className="status-pulse" /> Ouvert aujourd'hui <strong>jusqu'à 02:00</strong></div>
+              <div className="contact-hours"><span className="status-pulse" /> Horaires <strong>Tous les jours · 08:00 — 02:00</strong></div>
             </Reveal>
           </div>
         </section>
@@ -848,8 +946,8 @@ function App() {
       <footer className="site-footer">
         <div className="page-width footer-top">
           <div className="footer-brand">
-            <Logo light />
-            <p>Les saveurs de l'Afrique de l'Ouest<br />au coeur du 11e arrondissement.</p>
+            <a href="#accueil" className="footer-logo" aria-label="Diambo Resto, retour à l'accueil"><img src="/logo.jpg" alt="Logo Diambo Resto — Saveurs de l'Afrique de l'Ouest, restaurant africain à Paris 11e" width={1000} height={971} loading="lazy" /></a>
+            <p>Les saveurs de l'Afrique de l'Ouest<br />à Paris 11e, près de Nation.</p>
             <div className="footer-social">
               <small>Suivez-nous</small>
               <div className="footer-social-icons">
@@ -861,7 +959,7 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="footer-links"><div><small>Navigation</small><a href="#accueil">Accueil</a><a href="#carte">La carte</a><a href="#adresse">L'adresse</a><a href="#reseaux">Réseaux sociaux</a></div><div><small>Commander</small><a href="https://diambo-resto.fr" target="_blank" rel="noreferrer">Site web</a><a href="https://www.ubereats.com/fr/store/diambo-resto/vQN5B1ZFSK6dT9vy7j52Vw" target="_blank" rel="noreferrer">Uber Eats</a><a href="https://deliveroo.fr/fr/menu/paris/11eme-nation/diambo-resto" target="_blank" rel="noreferrer">Deliveroo</a></div><div><small>Contact</small><a href="tel:+33980726675">09 80 72 66 75</a><a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer">Itinéraire</a><span>Paris 11e</span></div></div>
+          <div className="footer-links"><div><small>Navigation</small><a href="#accueil">Accueil</a><a href="#carte">La carte</a><a href="#adresse">L'adresse</a><a href="#faq">Questions fréquentes</a><a href="#reseaux">Réseaux sociaux</a></div><div><small>Commander</small><a href="#commander">Commander en ligne</a><a href="https://www.ubereats.com/fr/store/diambo-resto/vQN5B1ZFSK6dT9vy7j52Vw" target="_blank" rel="noreferrer">Uber Eats</a><a href="https://deliveroo.fr/fr/menu/paris/11eme-nation/diambo-resto" target="_blank" rel="noreferrer">Deliveroo</a></div><div><small>Contact</small><a href="tel:+33980726675">09 80 72 66 75</a><a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer">Itinéraire</a><address><span>28 Rue Neuve des Boulets, 75011 Paris</span></address></div></div>
         </div>
         <div className="page-width footer-bottom"><span>© 2025 DIAMBO RESTO</span><span>Une table, un quartier, une histoire.</span><a href="#accueil">Retour en haut <Icon name="arrow" size={15} /></a></div>
       </footer>
@@ -871,7 +969,7 @@ function App() {
         <a href="https://www.google.com/maps/search/?api=1&query=Diambo+Resto+28+Rue+Neuve+des+Boulets+75011+Paris" target="_blank" rel="noreferrer" aria-label="Itinéraire vers Diambo Resto"><Icon name="pin" size={20} /></a>
       </div>
 
-      <div className="mobile-bottom-bar"><a href="tel:+33980726675"><Icon name="call" size={17} /> Appeler</a><a href="https://diambo-resto.fr" target="_blank" rel="noreferrer"><Icon name="utensils" size={17} /> Commander</a></div>
+      <div className="mobile-bottom-bar"><a href="tel:+33980726675"><Icon name="call" size={17} /> Appeler</a><a href="#commander"><Icon name="utensils" size={17} /> Commander</a></div>
     </div>
   );
 }

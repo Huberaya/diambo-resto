@@ -1,0 +1,25 @@
+{
+  "name": "Diambo Resto — Restaurant africain à Paris 11e",
+  "short_name": "Diambo Resto",
+  "description": "Restaurant d'Afrique de l'Ouest au 28 Rue Neuve des Boulets, Paris 11e : thiéb, yassa, maffé, poisson braisé, jus faits maison et thé Hatayé.",
+  "lang": "fr-FR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#20130e",
+  "theme_color": "#20130e",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
