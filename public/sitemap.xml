@@ -12,6 +12,26 @@
       <image:caption>Logo officiel de Diambo Resto, restaurant d'Afrique de l'Ouest au 28 Rue Neuve des Boulets, Paris 11e, près de Nation.</image:caption>
       <image:geo_location>Paris, France</image:geo_location>
     </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/ambiance/hero-plat.jpg</image:loc>
+      <image:title>Assiette généreuse de riz et poulet grillé — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/ambiance/partage-table.jpg</image:loc>
+      <image:title>Table familiale et plats partagés — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/ambiance/salle.jpg</image:loc>
+      <image:title>Salle du restaurant Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/ambiance/matchs.jpg</image:loc>
+      <image:title>Match de football diffusé dans la salle — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
   </url>
   <url>
     <loc>https://www.diambo-resto.fr/menu.html</loc>
@@ -56,6 +76,31 @@
     <image:image>
       <image:loc>https://www.diambo-resto.fr/images/plats/thieb-poisson.jpg</image:loc>
       <image:title>Thiéb au poisson (thiéboudienne) — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/thieb-poulet.jpg</image:loc>
+      <image:title>Thiéb au poulet, riz et légumes mijotés — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/yassa-poulet.jpg</image:loc>
+      <image:title>Yassa au poulet, oignons confits au citron — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/maffe.jpg</image:loc>
+      <image:title>Maffé à la pâte d'arachide et riz blanc — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/saga-saga.jpg</image:loc>
+      <image:title>Saga-saga, feuilles de manioc et riz blanc — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/ganna.jpg</image:loc>
+      <image:title>Ganna, plat traditionnel maison — Diambo Resto, Paris 11e</image:title>
       <image:geo_location>Paris, France</image:geo_location>
     </image:image>
     <image:image>
@@ -151,6 +196,11 @@
     <image:image>
       <image:loc>https://www.diambo-resto.fr/images/desserts/degue-maison.jpg</image:loc>
       <image:title>Dégué, couscous de mil au lait caillé — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/boissons/jus-bissap.jpg</image:loc>
+      <image:title>Jus de bissap maison — Diambo Resto, Paris 11e</image:title>
       <image:geo_location>Paris, France</image:geo_location>
     </image:image>
     <image:image>
