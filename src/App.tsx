@@ -41,8 +41,7 @@ type MenuItem = {
   featured?: boolean;
 };
 
-const fallbackImage =
-  "https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1200&q=85";
+const fallbackImage = "/images/plats/thieb-poisson.jpg";
 
 const menuItems: MenuItem[] = [
   {
@@ -60,8 +59,7 @@ const menuItems: MenuItem[] = [
     price: "10 €",
     category: "signature",
     tag: "Le classique",
-    image:
-      "https://images.pexels.com/photos/33434014/pexels-photo-33434014.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+    image: "/images/plats/thieb-poulet.jpg",
   },
   {
     name: "Poisson braisé + attiéké + alloco",
@@ -85,8 +83,7 @@ const menuItems: MenuItem[] = [
     price: "9 €",
     category: "signature",
     tag: "Mijoté signature",
-    image:
-      "https://images.pexels.com/photos/17696671/pexels-photo-17696671.jpeg?auto=compress&cs=tinysrgb&dpr=2&fit=crop&w=1200&h=950",
+    image: "/images/plats/yassa-poulet.jpg",
   },
   {
     name: "Maffé",
@@ -94,24 +91,21 @@ const menuItems: MenuItem[] = [
     price: "9 €",
     category: "signature",
     tag: "Sauce veloutée",
-    image:
-      "https://images.pexels.com/photos/998244/pexels-photo-998244.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+    image: "/images/plats/maffe.jpg",
   },
   {
     name: "Saga saga",
     detail: "Feuilles de manioc en sauce, servies avec riz blanc",
     price: "9 €",
     category: "classics",
-    image:
-      "https://images.pexels.com/photos/36090553/pexels-photo-36090553.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+    image: "/images/plats/saga-saga.jpg",
   },
   {
     name: "Ganna",
     detail: "Plat traditionnel généreux, recette maison",
     price: "9 €",
     category: "classics",
-    image:
-      "https://images.pexels.com/photos/36090555/pexels-photo-36090555.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+    image: "/images/plats/ganna.jpg",
   },
   {
     name: "Jus de Bissap",
@@ -119,8 +113,7 @@ const menuItems: MenuItem[] = [
     price: "2,50 €",
     category: "drinks",
     tag: "Fait maison",
-    image:
-      "https://images.pexels.com/photos/34467117/pexels-photo-34467117.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1200&h=950",
+    image: "/images/boissons/jus-bissap.jpg",
   },
   {
     name: "Jus de Gingembre",
@@ -180,8 +173,7 @@ const menuItems: MenuItem[] = [
   },
 ];
 
-const sportsImage =
-  "https://images.pexels.com/photos/36799150/pexels-photo-36799150.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1800&h=1250";
+const sportsImage = "/images/ambiance/matchs.jpg";
 
 const reviews = [
   {
@@ -204,8 +196,7 @@ const reviews = [
   },
 ];
 
-const heroImage =
-  "https://images.pexels.com/photos/20067063/pexels-photo-20067063.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1600&h=1055";
+const heroImage = "/images/ambiance/hero-plat.jpg";
 
 const socialLinks: SocialLink[] = [
   {
@@ -234,26 +225,9 @@ const socialLinks: SocialLink[] = [
   },
 ];
 
-const atmosphereImage =
-  "https://images.pexels.com/photos/33434014/pexels-photo-33434014.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1800&h=1250";
+const atmosphereImage = "/images/ambiance/partage-table.jpg";
 
-const interiorImage =
-  "https://images.pexels.com/photos/36127951/pexels-photo-36127951.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1800&h=1250";
-
-const pexelsSrcSet = (image: string, widths: number[], aspect: number) =>
-  widths
-    .map((width) => {
-      const resized = image
-        .replace(/([?&])dpr=\d+&/, "$1")
-        .replace(/w=\d+&h=\d+/, `w=${width}&h=${Math.round(width / aspect)}`);
-      return `${resized} ${width}w`;
-    })
-    .join(", ");
-
-const menuImageSrcSet = (image: string) =>
-  image.startsWith("https://images.pexels.com/")
-    ? pexelsSrcSet(image, [480, 720, 960, 1200], 1.263)
-    : undefined;
+const interiorImage = "/images/ambiance/salle.jpg";
 
 const menuChapterLabels: Record<MenuCategory, string> = {
   signature: "Signature de la maison",
@@ -695,7 +669,7 @@ function App() {
           <div className="page-width story-grid">
             <Reveal className="story-visual">
               <div className="visual-frame">
-                <img src={atmosphereImage} srcSet={pexelsSrcSet(atmosphereImage, [640, 960, 1400, 1800], 1.44)} sizes="(max-width: 720px) 92vw, (max-width: 1100px) 44vw, 560px" width={1800} height={1250} decoding="async" alt="Plat généreux de riz épicé et de poulet servi à table chez Diambo Resto, Paris 11e" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                <img src={atmosphereImage} width={900} height={879} decoding="async" alt="Plat généreux de riz épicé et de poulet servi à table chez Diambo Resto, Paris 11e" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                 <div className="visual-stamp"><span>01</span><span>FAMILLE</span></div>
                 <div className="visual-caption">Comme à la maison</div>
               </div>
@@ -737,7 +711,7 @@ function App() {
               {filteredMenu.map((item, index) => (
                 <motion.article className={`menu-item${item.featured ? " is-featured" : ""}`} key={item.name} layout initial={reduceMotion ? false : { opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: reduceMotion ? 0 : index * 0.06 }} data-cursor="goûter">
                   <div className="menu-image-wrap">
-                    <img src={item.image} srcSet={menuImageSrcSet(item.image)} sizes={item.featured ? "(max-width: 720px) 92vw, (max-width: 1100px) 64vw, 800px" : "(max-width: 720px) 46vw, (max-width: 1100px) 31vw, 390px"} width={item.image.startsWith("/images/") ? 800 : 1200} height={item.image.startsWith("/images/") ? 800 : 950} decoding="async" alt={`${item.name} — ${item.detail} (Diambo Resto, Paris 11e)`} loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                    <img src={item.image} sizes={item.featured ? "(max-width: 720px) 92vw, (max-width: 1100px) 64vw, 800px" : "(max-width: 720px) 46vw, (max-width: 1100px) 31vw, 390px"} width={800} height={800} decoding="async" alt={`${item.name} — ${item.detail} (Diambo Resto, Paris 11e)`} loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                     {item.tag && <span className="menu-tag">{item.tag}</span>}
                     <span className="menu-item-number" aria-hidden="true">{(index + 1).toString().padStart(2, "0")}</span>
                     <div className="menu-image-overlay"><span>{menuChapterLabels[item.category]}</span><Icon name="arrowUpRight" size={18} /></div>
@@ -781,7 +755,7 @@ function App() {
             <div className="ambiance-grid">
               <Reveal className="ambiance-card ambiance-card-large" delay={0.05}>
                 <div className="ambiance-card-image">
-                  <img src={sportsImage} srcSet={pexelsSrcSet(sportsImage, [640, 960, 1400, 1800], 1.44)} sizes="(max-width: 720px) 92vw, (max-width: 1100px) 58vw, 760px" width={1800} height={1250} decoding="async" alt="Ambiance conviviale pour regarder les matchs de football chez Diambo Resto, Paris 11e" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                  <img src={sportsImage} width={1800} height={767} decoding="async" alt="Ambiance conviviale pour regarder les matchs de football chez Diambo Resto, Paris 11e" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                   <div className="ambiance-card-overlay">
                     <span className="ambiance-card-icon">⚽</span>
                     <h3>Les matchs sur grand écran</h3>
@@ -791,7 +765,7 @@ function App() {
               </Reveal>
               <Reveal className="ambiance-card" delay={0.12}>
                 <div className="ambiance-card-image ambiance-card-dark">
-                  <img src="https://images.pexels.com/photos/37515893/pexels-photo-37515893.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700" srcSet={pexelsSrcSet("https://images.pexels.com/photos/37515893/pexels-photo-37515893.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700", [480, 720, 900], 1.286)} sizes="(max-width: 720px) 92vw, (max-width: 1100px) 42vw, 540px" width={900} height={700} decoding="async" alt="Thé Hatayé servi à la menthe chez Diambo Resto, Paris 11e" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                  <img src="/images/boissons/the-hataye-menthe.jpg" width={546} height={546} decoding="async" alt="Thé Hatayé servi à la menthe chez Diambo Resto, Paris 11e" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                   <div className="ambiance-card-overlay">
                     <span className="ambiance-card-icon">🍵</span>
                     <h3>Le rituel du Hatayé</h3>
@@ -801,7 +775,7 @@ function App() {
               </Reveal>
               <Reveal className="ambiance-card" delay={0.18}>
                 <div className="ambiance-card-image ambiance-card-dark">
-                  <img src="https://images.pexels.com/photos/34467117/pexels-photo-34467117.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700" srcSet={pexelsSrcSet("https://images.pexels.com/photos/34467117/pexels-photo-34467117.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700", [480, 720, 900], 1.286)} sizes="(max-width: 720px) 92vw, (max-width: 1100px) 42vw, 540px" width={900} height={700} decoding="async" alt="Jus de bissap fait maison en bouteille chez Diambo Resto, Paris 11e" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
+                  <img src="/images/boissons/jus-bissap.jpg" width={800} height={800} decoding="async" alt="Jus de bissap fait maison en bouteille chez Diambo Resto, Paris 11e" loading="lazy" onError={(event) => { event.currentTarget.src = fallbackImage; }} />
                   <div className="ambiance-card-overlay">
                     <span className="ambiance-card-icon">🍹</span>
                     <h3>Nos jus faits maison</h3>
