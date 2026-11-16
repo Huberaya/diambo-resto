@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.diambo-resto.fr/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -15,7 +15,7 @@
   </url>
   <url>
     <loc>https://www.diambo-resto.fr/menu.html</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -69,6 +69,56 @@
       <image:geo_location>Paris, France</image:geo_location>
     </image:image>
     <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/poulet-braise-frites-maison.jpg</image:loc>
+      <image:title>Poulet braisé et frites, sans alcool — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/poulet-braise-salade-frites-maison.jpg</image:loc>
+      <image:title>Poulet braisé, salade et frites — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/poulet-braise-attieke-alloco-maison.jpg</image:loc>
+      <image:title>Poulet braisé, attiéké et alloco — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/poisson-braise-frites-maison.jpg</image:loc>
+      <image:title>Poisson braisé entier et frites — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/poisson-braise-salade-frites-maison.jpg</image:loc>
+      <image:title>Poisson braisé, salade et frites — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/to-maison.jpg</image:loc>
+      <image:title>Tô, semoule de maïs traditionnelle et sauce verte — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/bassi.jpg</image:loc>
+      <image:title>Bassi, couscous de mil sénégalais — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/couscous.jpg</image:loc>
+      <image:title>Couscous, semoule de blé et légumes mijotés — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/fakoye.jpg</image:loc>
+      <image:title>Fakoye, sauce de feuilles de corète et bœuf — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.diambo-resto.fr/images/plats/fonio.jpg</image:loc>
+      <image:title>Fonio, céréale fine d'Afrique de l'Ouest — Diambo Resto, Paris 11e</image:title>
+      <image:geo_location>Paris, France</image:geo_location>
+    </image:image>
+    <image:image>
       <image:loc>https://www.diambo-resto.fr/images/plats/nandji.jpg</image:loc>
       <image:title>Nandji, bœuf mijoté en sauce tomate et légumes avec riz — Diambo Resto, Paris 11e</image:title>
       <image:geo_location>Paris, France</image:geo_location>
@@ -79,38 +129,8 @@
       <image:geo_location>Paris, France</image:geo_location>
     </image:image>
     <image:image>
-      <image:loc>https://www.diambo-resto.fr/images/plats/poulet-braise-attieke-alloco.jpg</image:loc>
-      <image:title>Poulet braisé, attiéké et alloco — Diambo Resto, Paris 11e</image:title>
-      <image:geo_location>Paris, France</image:geo_location>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.diambo-resto.fr/images/plats/poisson-braise-salade-frites.jpg</image:loc>
-      <image:title>Poisson braisé, salade et frites croustillantes — Diambo Resto, Paris 11e</image:title>
-      <image:geo_location>Paris, France</image:geo_location>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.diambo-resto.fr/images/plats/poulet-braise-salade-frites.jpg</image:loc>
-      <image:title>Poulet braisé, salade et frites — Diambo Resto, Paris 11e</image:title>
-      <image:geo_location>Paris, France</image:geo_location>
-    </image:image>
-    <image:image>
       <image:loc>https://www.diambo-resto.fr/images/plats/poulet-braise-alloco.jpg</image:loc>
       <image:title>Poulet braisé et alloco doré — Diambo Resto, Paris 11e</image:title>
-      <image:geo_location>Paris, France</image:geo_location>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.diambo-resto.fr/images/plats/poisson-braise-frites.jpg</image:loc>
-      <image:title>Poisson braisé entier et frites — Diambo Resto, Paris 11e</image:title>
-      <image:geo_location>Paris, France</image:geo_location>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.diambo-resto.fr/images/plats/poulet-braise-frites.jpg</image:loc>
-      <image:title>Poulet braisé et frites — Diambo Resto, Paris 11e</image:title>
-      <image:geo_location>Paris, France</image:geo_location>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.diambo-resto.fr/images/plats/to.jpg</image:loc>
-      <image:title>Tô, semoule de maïs traditionnelle et sauce verte — Diambo Resto, Paris 11e</image:title>
       <image:geo_location>Paris, France</image:geo_location>
     </image:image>
     <image:image>
@@ -201,7 +221,7 @@
   </url>
   <url>
     <loc>https://www.diambo-resto.fr/reseaux.html</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
